@@ -67,6 +67,7 @@
             |-- Home
                 |-- Home.jsx
             |-- Services
+                |-- financial-portfolio.jsx
                 |-- images
                     |-- audit-and-assurance.jpg
                     |-- audit-assurance-documents.jpg
@@ -92,9 +93,12 @@
                     |-- trades-and-stocks.jpg
                     |-- turnaround-consulting-sign.jpg
                     |-- turnaround-consulting.jpg
+                |-- loan-support.jsx
                 |-- service-card.css
+                |-- service-page.css
                 |-- Service-page.jsx
                 |-- ServiceCard.jsx
+                |-- services-sections.css
         |-- ProgressDonut.jsx
     |-- index.css
     |-- main.jsx

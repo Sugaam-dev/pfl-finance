@@ -28,7 +28,7 @@
 }
 
 .title-underline {
-  width: 48px;
+  width: 60px;
   height: 4px;
   background: var(--green);
   border-radius: 2px;
@@ -181,6 +181,49 @@
 /* Focus visible for accessibility */
 .read-more:focus-visible,
 .service-card :focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+/* shared CTA row + buttons (used by cards and sections) */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* pairs with .read-more-row default */
+  gap: 12px;
+}
+
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--text);
+  --btn-br: var(--green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 999px;
+  border: 2px solid var(--btn-br);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.btn-solid {
+  --btn-bg: var(--green);
+  --btn-fg: #fff;
+  --btn-br: var(--green);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.btn:focus-visible,
+.read-more:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 2px;
 }

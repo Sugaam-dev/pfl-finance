@@ -1,6 +1,14 @@
 import ServiceCard from "./ServiceCard";
 import "./service-card.css";
-import auditImage from "./images/audit-and-assurance.jpg";
+import "./services-sections.css";
+import "./service-page.css";
+import FinancialPortfolioSection from "./financial-portfolio.jsx";
+import LoanSupportSection from "./loan-support.jsx";
+
+const CONTACT_PATH = "/contact"
+const WHATSAPP_NUMBER = "8618543258"
+const waFor = (label) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'm interested in ${label}`)}`
+import auditImage from "./images/local-business-opportunities.jpg";
 import finimage from "./images/local-business-opportunities.jpg";
 import bondimage from "./images/bonds-and-commodities.jpg";
 import tradeimage from "./images/trades-and-stocks.jpg";
@@ -25,7 +33,7 @@ const services = [
   },
   {
     label: "Car & Vehicle Loans",
-    description: "Drive your dream car with flexible financing. We offer the best deals on-New car loans,Used car loans,Commercial vehicle financing,With our wide partner network, you get low interest rates and fast disbursals.",
+    description: "Drive your dream car with flexible financing. We offer the best deals on-New car loans,Used car loans,Commercial vehicle financing,With our wide partner network, low interest rates and fast disbursals.",
     image: auditImage
   },
   {
@@ -42,7 +50,7 @@ const services = [
 
 export default function ServicePage() {
   return (
-    <main className="services-section">
+    <main className="service-page services-section">
       <header className="section-head" aria-labelledby="services-title">
         <h1 id="services-title" className="section-title">
           Our Services
@@ -52,9 +60,14 @@ export default function ServicePage() {
 
       <section className="cards-grid" aria-label="Services">
         {services.map((s, i) => (
-          <ServiceCard key={i} image={s.image} label={s.label} description={s.description} />
+          <ServiceCard key={i} image={s.image} label={s.label} description={s.description}contactHref={CONTACT_PATH}
+            applyHref={waFor(s.label)} />
         ))}
       </section>
+      <div className="extra-sections" aria-label="Additional Services">
+        <FinancialPortfolioSection />
+        <LoanSupportSection />
+      </div>
     </main>
   )
 }

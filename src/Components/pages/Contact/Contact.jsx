@@ -3,9 +3,12 @@ import ContactInfo from './ContactInfo';
 import ContactPersons from './ContactPersons';
 import FeedbackForm from './FeedbackForm';
 import './Style/ContactPage.css';
+import MapEmbed from './MapEmbed';
 
 const ContactPage = () => {
   return (
+    <>
+  
     <div className="contact-page-wrapper">
       <div className="contact-page">
         
@@ -21,6 +24,8 @@ const ContactPage = () => {
         </div>
       </div>
     </div>
+<MapEmbed/>
+      </>
   );
 };
 

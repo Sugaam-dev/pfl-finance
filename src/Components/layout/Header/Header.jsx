@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Style/Header.css';
+import logo from '../Footer/images/pflf.png';
+import { Facebook, Twitter, Linkedin, Instagram, MapPin } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +34,11 @@ const Header = () => {
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo" onClick={closeMenu}>
-            <span className="logo-text">YourLogo</span>
+            <img 
+              src={logo}
+              alt="Company Logo" 
+              className="logo-image"
+            />
           </Link>
 
           <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -74,6 +80,27 @@ const Header = () => {
             </li>
           </ul>
 
+          <div className="nav-right">
+            <div className="location-wrapper">
+              <MapPin className="location-icon" size={18} />
+              <span className="location-text">Mumbai, India</span>
+            </div>
+            <div className="social-icons">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+                <Facebook size={16} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Twitter">
+                <Twitter size={16} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+                <Linkedin size={16} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+                <Instagram size={16} />
+              </a>
+            </div>
+          </div>
+
           <button
             className={`hamburger ${isMenuOpen ? 'active' : ''}`}
             onClick={toggleMenu}
@@ -86,7 +113,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
+      {isMenuOpen && <div className="menu-overlay active" onClick={closeMenu}></div>}
     </header>
   );
 };

@@ -31,7 +31,15 @@
         |-- Consulting-tabs.jsx
         |-- layout
             |-- Footer
+                |-- footer.css
                 |-- Footer.jsx
+                |-- images
+                    |-- pfl.png
+                    |-- pflf.png
+                    |-- Screenshot 2025-10-11 192346.png
+                    |-- Screenshot 2025-10-11 194507.png
+                    |-- Screenshot 2025-10-11 194949.png
+                    |-- Screenshot 2025-10-11 195101.png
             |-- Header
                 |-- Header.jsx
             |-- RootLayout
@@ -50,7 +58,34 @@
             |-- Home
                 |-- Home.jsx
             |-- Services
-                |-- Services.jsx
+                |-- images
+                    |-- audit-and-assurance.jpg
+                    |-- audit-assurance-documents.jpg
+                    |-- bonds-and-commodities.jpg
+                    |-- financial-charts-and-documents.jpg
+                    |-- financial-charts-documents.jpg
+                    |-- images
+                        |-- 9400.jpg
+                        |-- design-mode
+                            |-- image.png
+                        |-- india-dotted-map.jpg
+                    |-- local-business-opportunities.jpg
+                    |-- office-laptop-work.png
+                    |-- people-working-laptops.jpg
+                    |-- placeholder-logo.png
+                    |-- placeholder-logo.svg
+                    |-- placeholder-user.jpg
+                    |-- placeholder.jpg
+                    |-- placeholder.svg
+                    |-- stock-market-screens.jpg
+                    |-- strategic-planning.jpg
+                    |-- strategy-chess-board.jpg
+                    |-- trades-and-stocks.jpg
+                    |-- turnaround-consulting-sign.jpg
+                    |-- turnaround-consulting.jpg
+                |-- service-card.css
+                |-- Service-page.jsx
+                |-- ServiceCard.jsx
         |-- ProgressDonut.jsx
     |-- index.css
     |-- main.jsx

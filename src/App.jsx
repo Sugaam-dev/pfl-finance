@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import About from './Components/pages/About/About'
-// import Contact from './Components/pages/Contact/Contact'
+import Contact from './Components/pages/Contact/Contact'
 
 
 
@@ -11,8 +10,8 @@ function App() {
 
   return (
     <>
-    {/* <Contact/> */}
-    <About/>
+    <Contact/>
+
     </>
   )
 }

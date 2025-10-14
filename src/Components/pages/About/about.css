@@ -51,18 +51,18 @@ img {
 section {
   padding: 56px 20px;
 }
-.section-title {
+.about-section-title {
   font-size: 28px;
   line-height: 1.2;
   margin: 0 0 24px;
   text-align: center;
   font-style: italic;
 }
-.section-title .accent {
+.about-section-title .accent {
   color: var(--accent);
 }
 @media (min-width: 768px) {
-  .section-title {
+  .about-section-title {
     font-size: 34px;
   }
 }
@@ -348,7 +348,7 @@ section {
     center / cover no-repeat;
   border-radius: calc(var(--radius) * 1.2);
 }
-.story .section-title {
+.story .about-section-title {
   position: relative;
   z-index: 1;
   color: #fff;

@@ -42,6 +42,8 @@
                     |-- Screenshot 2025-10-11 195101.png
             |-- Header
                 |-- Header.jsx
+                |-- Style
+                    |-- Header.css
             |-- RootLayout
                 |-- RootLayout.jsx
         |-- Logos.jsx
@@ -55,6 +57,13 @@
                 |-- ContactInfo.jsx
                 |-- ContactPersons.jsx
                 |-- FeedbackForm.jsx
+                |-- MapEmbed.jsx
+                |-- Style
+                    |-- ContactInfo.css
+                    |-- ContactPage.css
+                    |-- ContactPersons.css
+                    |-- FeedbackForm.css
+                    |-- MapEmbed.css
             |-- Home
                 |-- Home.jsx
             |-- Services

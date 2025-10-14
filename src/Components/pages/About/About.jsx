@@ -271,7 +271,7 @@ export default function About() {
       {/* EXPERTS (unchanged header, map) */}
       <section className="experts" aria-labelledby="experts-title">
         <div className="experts-header">
-          <h2 id="experts-title" className="section-title text-balance">
+          <h2 id="experts-title" className="about-section-title text-balance">
             Working with <span className="accent">experts</span> around the India
           </h2>
           {/* <p className="experts-sub">
@@ -331,7 +331,7 @@ export default function About() {
 
       {/* TEAM (unchanged) */}
       <section className="team" aria-labelledby="team-title">
-        <h2 id="team-title" className="section-title text-balance">
+        <h2 id="team-title" className="about-section-title text-balance">
           Meet our <span className="accent">team</span>
         </h2>
         <div className="team-grid">

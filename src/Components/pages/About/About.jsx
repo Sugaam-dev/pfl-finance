@@ -4,7 +4,7 @@ import "./about.css";
 import ProgressDonut from "../../ProgressDonut";
 import ClientsFeedback from "../../ClientsFeedback";
 import StoryTimeline from "./StoryTimeline";
-import Logos from "../../Logos";
+// import Logos from "../../Logos";
 
 // ---- Icons (inline SVG, coded – no image links) ----
 function Icon({ name }) {
@@ -363,7 +363,7 @@ export default function About() {
 
       {/* Clients Feedback (new slider) */}
       <ClientsFeedback />
-      <Logos/>
+      {/* <Logos/> */}
     </main>
   )
 }

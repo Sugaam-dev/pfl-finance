@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 import "./about.css";
 import ProgressDonut from "../../ProgressDonut";
 import ClientsFeedback from "../../ClientsFeedback";
-import StoryTimeline from "./StoryTimeline";
+// import StoryTimeline from "./StoryTimeline";
 // import Logos from "../../Logos";
 
 // ---- Icons (inline SVG, coded – no image links) ----
@@ -100,35 +100,103 @@ function StandForTabs() {
   // Base items and copy (kept exactly like your existing section)
   const items = useMemo(
     () => ({
+
+      // FINANCIAL =========================================================
       environment: {
         icon: "environment",
-        title: "ENVIRONMENT",
-        text: "Woke raw denim seitan post-ironic, twee flannel bicycle rights gastropub direct trade sriracha",
+        title: "Personal Loans:",
+        text: "Tailored solutions for your immediate and lifestyle needs.",
       },
       consumer: {
         icon: "consumer",
-        title: "CUNSUMER PRODUCTS",
-        text: "Woke raw denim seitan post-ironic, twee flannel bicycle rights gastropub direct trade sriracha",
-      },
+        title: "Business Loans:",
+        text: "Empowering entrepreneurs with easy access to working capital.",
+      },     
       aviation: {
         icon: "aviation",
-        title: "TRAVEL AND AVIATION",
-        text: "Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of. Sartorial leggings butcher pork",
+        title: "Home Loans:",
+        text: " Helping families achieve their dream of owning a home.",
       },
       finance: {
         icon: "finance",
-        title: "FINANCIAL SERVICES",
-        text: "Truffaut tumeric forage polaroid tacos before they sold out gluten-free loko synth pabst gentrify.",
+        title: "Credit Rehabilitation:",
+        text: " Support for applicants with low CIBIL or past defaults.",
       },
       transport: {
         icon: "transport",
-        title: "SURFACE TRANSPORT",
-        text: "Cronut semiotics portland, truffaut tumeric forage polaroid tacos before they sold out gluten-free",
+        title: "Emergency Funding:",
+        text: "Quick, reliable loans during urgent financial situations.",
       },
       strategic: {
         icon: "strategic",
-        title: "STRATEGIC PLANNING",
-        text: "Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of. squid vinyl leggings butcher pork",
+        title: "Debt Consolidation:",
+        text: " Streamlining multiple loans for better repayment management.",
+      },
+
+//CONSULTING=============================================================================
+
+     FinancialAdvisory: {
+        icon: "environment",
+        title: "Financial Advisory:",
+        text: "Personalized plans for loan optimization and budgeting.",
+      },
+      CIBILImprovementStrategy: {
+        icon: "consumer",
+        title: "CIBIL Improvement Strategy:",
+        text: "Step-by-step guidance to rebuild your credit profile.",
+      },     
+      LegalLoanConsulting: {
+        icon: "aviation",
+        title: "Legal Loan Consulting:",
+        text: " Specialized support for clients with ongoing or resolved legal issues.",
+      },
+      InvestmentPlanning: {
+        icon: "finance",
+        title: "Investment Planning:",
+        text: " Smart, data-driven insights to grow your wealth securely.",
+      },
+      BankLiaisonServices: {
+        icon: "transport",
+        title: "Bank Liaison Services:",
+        text: "We handle communication and documentation with lenders.",
+      },
+      RiskAssessment:  {
+        icon: "strategic",
+        title: "Risk Assessment:",
+        text: " Evaluating credit and repayment risks to guide safe borrowing.",
+      },
+//OTHER SOLUTION ===============================================================
+
+
+ InsuranceAssistance: {
+        icon: "environment",
+        title: "Insurance Assistance:",
+        text: " Coverage plans tailored for personal and business protection.",
+      },
+      FinancialDocumentationHelp:  {
+        icon: "consumer",
+        title: "Financial Documentation Help:",
+        text: "Error-free paperwork and compliance support.",
+      },     
+      LoanRefinanceSolutions: {
+        icon: "aviation",
+        title: "Loan Refinance Solutions:",
+        text: "Better terms, reduced interest, smarter repayment.",
+      },
+      StartupFinanceSupport: {
+        icon: "finance",
+        title: "Startup Finance Support:",
+        text: "Helping new businesses secure early-stage capital.",
+      },
+      AssetManagement: {
+        icon: "transport",
+        title: "Asset Management:",
+        text: "Efficient handling of existing financial resources for growth.",
+      },
+      CustomerSupportAndEducation:  {
+        icon: "strategic",
+        title: "Customer Support & Education:",
+        text: "Empowering clients with knowledge for financial independence.",
       },
     }),
     [],
@@ -136,11 +204,11 @@ function StandForTabs() {
 
   // Orders:
   // - other: exactly your current order
-  const otherOrder = ["environment", "consumer", "aviation", "finance", "transport", "strategic"]
+  const otherOrder = ["InsuranceAssistance", "FinancialDocumentationHelp", "LoanRefinanceSolutions", "StartupFinanceSupport", "AssetManagement", "CustomerSupportAndEducation"]
   // - financial: matches your first image (row1: aviation, strategic, consumer; row2: transport, environment, finance)
   const financialOrder = ["aviation", "strategic", "consumer", "transport", "environment", "finance"]
   // - consulting: matches your second image (row1: consumer, transport, environment; row2: aviation, finance, strategic)
-  const consultingOrder = ["consumer", "transport", "environment", "aviation", "finance", "strategic"]
+  const consultingOrder = ["FinancialAdvisory", "CIBILImprovementStrategy", "LegalLoanConsulting", "InvestmentPlanning", "BankLiaisonServices", "RiskAssessment"]
 
   const order = tab === "financial" ? financialOrder : tab === "consulting" ? consultingOrder : otherOrder
   const panelId = `panel-${tab}`
@@ -148,7 +216,7 @@ function StandForTabs() {
   return (
     <section className="standfor" aria-labelledby="standfor-title">
       <h2 id="standfor-title" className="standfor-heading">
-        What do we Stand for?
+        What we Stand for?
       </h2>
 
       <div className="standfor-tabs" role="tablist" aria-label="Stand for categories">
@@ -250,18 +318,24 @@ export default function About() {
         </div>
         <div className="hero-content">
           <h1 id="rb-title" className="title text-balance">
-            Ready Business and Finance Solutions
+            Your Trusted Loan Partner
           </h1>
           <p className="lead">
-            We stand with a commitment to agility and integrity across diverse organizations, bringing a passion for
-            client success. Our range of services is tailored individually for each company—no matter how complex the
-            task.
+            Our team specializes in assisting individuals who face challenges like low CIBIL scores or ongoing legal disputes,
+            guiding them toward practical and achievable financial solutions. We take pride in offering personalized strategies,
+            transparent processes, and a results-driven approach that makes funding accessible to everyone.
+            Why Choose Us.
           </p>
-          <ul className="hero-points">
-            <li>Tailored financial strategies</li>
-            <li>Cross-industry expertise</li>
-            <li>Long-term partnership mindset</li>
+      <ul className="hero-points">
+            <li>Loan access from 167+ banks and NBFCs</li>
+            <li>Assistance with low credit or legal challenges</li>
+            <li>Emergency loan support for urgent needs</li>
+            <li>Expert team dedicated to your financial success</li>
           </ul>
+          <p className="lead">
+          With agility, integrity, and a deep commitment to our clients, we stand beside you at every
+           step — from application to approval — helping you secure the financial confidence you deserve.
+           </p>
         </div>
       </section>
 
@@ -281,23 +355,22 @@ export default function About() {
         <IndiaMap />
         <div className="donut-row">
           <ProgressDonut
-            value={25}
-            label="TRAVEL AND AVIATION"
-            description="Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of."
+            value={90}
+            label="Loan Approvals"
+            description="Helping clients get the funding they need with faster approvals."
+          />
+          <ProgressDonut
+            value={82}
+            label="Credit Improvement Success"
+            description="Guiding applicants to rebuild and improve their credit score."
           />
           <ProgressDonut
             value={63}
-            label="STRATEGIC PLANNING"
-            description="Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of."
-          />
-          <ProgressDonut
-            value={90}
-            label="TRAVEL AND AVIATION"
-            description="Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of."
+            label="Emergency Loan Assistance"
+            description="Quick response and fast-track processing for urgent needs."
           />
         </div>
       </section>
-
       {/* STORY (unchanged) */}
       {/* <section className="story" aria-labelledby="story-title">
         <div className="story-bg" />
@@ -327,23 +400,23 @@ export default function About() {
           </li>
         </ol>
       </section> */}
-      <StoryTimeline />
+      {/* <StoryTimeline /> */}
 
       {/* TEAM (unchanged) */}
       <section className="team" aria-labelledby="team-title">
         <h2 id="team-title" className="about-section-title text-balance">
-          Meet our <span className="accent">team</span>
+          Partnered with Leading  <span className="accent">Banks & NBFCs</span>
         </h2>
         <div className="team-grid">
           {[
-            { name: "Andy Kochar", role: "Account Director", img: "/images/teams/andy.jpg" },
-            { name: "Clark Robarts", role: "Chief Product Officer", img: "/images/teams/clark.jpg" },
-            { name: "Ashley Henry", role: "Marketing Director", img: "/images/teams/ashley.jpg" },
-            { name: "Dennis Norris", role: "Finance Lead", img: "/images/teams/dennis.jpg" },
-            { name: "Gina Kennedy", role: "Art Director", img: "/images/teams/gina.jpg" },
-            { name: "Fernando Torres", role: "Operations", img: "/images/teams/fernando.jpg" },
-            { name: "Claudette Franco", role: "Business Analyst", img: "/images/teams/claudette.jpg" },
-            { name: "Jonathan Adams", role: "Consultant", img: "/images/teams/jonathan.jpg" },
+            { name: "IDBI Bank", role: "IDBI Bank", img: "/images/teams/andy.jpg" },
+            { name: "Axis Bandk", role: "Axis Bank", img: "/images/teams/clark.png" },
+            { name: "Bank Of Maharashtra", role: "Bank Of Maharashtra", img: "/images/teams/ashley.webp" },
+            { name: "Induslnd Bank", role: "Induslnd Bank", img: "/images/teams/dennis.jpg" },
+            { name: "BOI Bank", role: "BOI Bank", img: "/images/teams/gina.jpg" },
+            { name: "Kotak Bank", role: "Kotak Bank", img: "/images/teams/fernando.jpg" },
+            { name: "Indian Overseas", role: "indian overseas", img: "/images/teams/claudette.jpg" },
+            { name: "SBI Bank", role: "SBI Bank", img: "/images/teams/jonathan.jpg" },
           ].map((m, i) => (
             <article className="member" key={i}>
               <img

@@ -11,10 +11,14 @@
             |-- donald.jpg
         |-- hero-meeting.jpg
         |-- india-map.jpg
+        |-- slide-1.jpg
+        |-- slide-2.jpg
+        |-- slide-3.jpg
+        |-- slide-4.jpg
         |-- teams
             |-- andy.jpg
-            |-- ashley.jpg
-            |-- clark.jpg
+            |-- ashley.webp
+            |-- clark.png
             |-- claudette.jpg
             |-- dennis.jpg
             |-- fernando.jpg
@@ -65,6 +69,9 @@
                     |-- FeedbackForm.css
                     |-- MapEmbed.css
             |-- Home
+                |-- box-reveal.jsx
+                |-- box-reveal.module.css
+                |-- carousel.jsx
                 |-- Home.jsx
             |-- Services
                 |-- financial-portfolio.jsx

@@ -1,0 +1,29 @@
+/* Overlay grid that sits over the current slide */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Each tile shows a slice of the target image and reveals in */
+.tile {
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(0.01) translateY(6px);
+  filter: blur(3px);
+  will-change: transform, opacity, filter;
+  animation-name: revealBoxTile;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revealBoxTile {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}

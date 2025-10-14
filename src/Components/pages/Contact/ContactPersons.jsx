@@ -1,58 +1,78 @@
 import React from 'react';
+import { Phone, Mail } from 'lucide-react';
+import './Style/ContactPersons.css';
 
 const ContactPersons = () => {
   return (
-    <div className="grid grid-cols-2 gap-x-20 pt-10 border-t border-gray-300 max-w-5xl mx-auto">
+    <div className="contact-persons-container">
       
       {/* Recruiting Inquiries */}
-      <div>
-        <h3 className="text-[15px] font-bold text-black mb-4 lowercase">
-          recruiting inquiries
-        </h3>
-        <p className="text-[15px] text-gray-700 leading-[1.6] mb-7">
+      <div className="person-section">
+        <h3 className="person-heading">recruiting inquiries</h3>
+        <p className="person-description">
           For more information regarding current career opportunities, please contact:
         </p>
         
-        <div className="flex gap-4 items-start">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex-shrink-0"></div>
-          <div>
-            <p className="font-bold text-black text-[11px] tracking-[0.08em] mb-1 uppercase">
-              AMANDA SEYFRIED
-            </p>
-            <p className="italic text-gray-400 text-[13px] mb-3">
-              Recruiting Manager
-            </p>
-            <div className="text-[13px] text-gray-600 space-y-1 leading-relaxed">
-              <div>📞 +1 212 123 4505</div>
-              <div>📞 +1 212 202 3335</div>
-              <div>✉️ recruiting@stylemixthemes.com</div>
+        <div className="person-card">
+          <div className="person-avatar">
+            <img 
+              src="/path-to-amanda-image.jpg" 
+              alt="Amanda Seyfried"
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          </div>
+          <div className="person-details">
+            <p className="person-name">AMANDA SEYFRIED</p>
+            <p className="person-title">Recruiting Manager</p>
+            <div className="person-contact">
+              <div className="contact-item">
+                <Phone size={14} strokeWidth={2} />
+                <span>+1 212 123 4505</span>
+              </div>
+              <div className="contact-item">
+                <Phone size={14} strokeWidth={2} />
+                <span>+1 212 202 3335</span>
+              </div>
+              <div className="contact-item">
+                <Mail size={14} strokeWidth={2} />
+                <span>recruiting@stylemixthemes.com</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Press Inquiries */}
-      <div>
-        <h3 className="text-[15px] font-bold text-black mb-4 lowercase">
-          press inquiries
-        </h3>
-        <p className="text-[15px] text-gray-700 leading-[1.6] mb-7">
+      <div className="person-section">
+        <h3 className="person-heading">press inquiries</h3>
+        <p className="person-description">
           If you are a member of the press and would like to speak with someone at Consulting, please contact:
         </p>
         
-        <div className="flex gap-4 items-start">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex-shrink-0"></div>
-          <div>
-            <p className="font-bold text-black text-[11px] tracking-[0.08em] mb-1 uppercase">
-              DONALD SIMPSON
-            </p>
-            <p className="italic text-gray-400 text-[13px] mb-3">
-              Senior Marketing Manager
-            </p>
-            <div className="text-[13px] text-gray-600 space-y-1 leading-relaxed">
-              <div>📞 +1 212 123 4040</div>
-              <div>📞 +1 212 617 5050</div>
-              <div>✉️ d.simpson@stylemixthemes.com</div>
+        <div className="person-card">
+          <div className="person-avatar">
+            <img 
+              src="/path-to-donald-image.jpg" 
+              alt="Donald Simpson"
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          </div>
+          <div className="person-details">
+            <p className="person-name">DONALD SIMPSON</p>
+            <p className="person-title">Senior Marketing Manager</p>
+            <div className="person-contact">
+              <div className="contact-item">
+                <Phone size={14} strokeWidth={2} />
+                <span>+1 212 123 4040</span>
+              </div>
+              <div className="contact-item">
+                <Phone size={14} strokeWidth={2} />
+                <span>+1 212 617 5050</span>
+              </div>
+              <div className="contact-item">
+                <Mail size={14} strokeWidth={2} />
+                <span>d.simpson@stylemixthemes.com</span>
+              </div>
             </div>
           </div>
         </div>

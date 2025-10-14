@@ -4,11 +4,31 @@
 |-- package-lock.json
 |-- package.json
 |-- public
+    |-- images
+        |-- clients
+            |-- amanda.jpg
+            |-- christian.jpg
+            |-- donald.jpg
+        |-- hero-meeting.jpg
+        |-- india-map.jpg
+        |-- teams
+            |-- andy.jpg
+            |-- ashley.jpg
+            |-- clark.jpg
+            |-- claudette.jpg
+            |-- dennis.jpg
+            |-- fernando.jpg
+            |-- gina.jpg
+            |-- jonathan.jpg
+        |-- timeline-bg.jpg
     |-- vite.svg
 |-- README.md
 |-- src
     |-- App.jsx
     |-- Components
+        |-- client-logos.css
+        |-- ClientsFeedback.jsx
+        |-- Consulting-tabs.jsx
         |-- layout
             |-- Footer
                 |-- footer.css
@@ -24,9 +44,12 @@
                 |-- Header.jsx
             |-- RootLayout
                 |-- RootLayout.jsx
+        |-- Logos.jsx
         |-- pages
             |-- About
+                |-- about.css
                 |-- About.jsx
+                |-- StoryTimeline.jsx
             |-- Contact
                 |-- Contact.jsx
                 |-- ContactInfo.jsx
@@ -63,6 +86,7 @@
                 |-- service-card.css
                 |-- Service-page.jsx
                 |-- ServiceCard.jsx
+        |-- ProgressDonut.jsx
     |-- index.css
     |-- main.jsx
 |-- vite.config.js

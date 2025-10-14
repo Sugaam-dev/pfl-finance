@@ -288,7 +288,7 @@ section {
   opacity: 0.85;
   filter: contrast(95%) saturate(90%);
 }
-.map-dot {
+/* .map-dot {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -297,7 +297,7 @@ section {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 4px rgba(231, 69, 69, 0.2);
-}
+} */
 
 /* Stats */
 .stats {

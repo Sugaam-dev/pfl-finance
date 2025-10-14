@@ -1,0 +1,449 @@
+.contact-persons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding-top: 56px;
+  margin-top: 56px;
+  border-top: 1px solid #e5e7eb;
+  width: 100%;
+  align-items: stretch; /* Ensures equal height */
+}
+
+.person-section {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%; /* Makes both sections equal height */
+}
+
+.person-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 18px;
+  text-transform: lowercase;
+  letter-spacing: 0.01em;
+  min-height: 22px; /* Fixed height for alignment */
+}
+
+.person-description {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-height: 78px; /* Fixed minimum height to align cards */
+  display: flex;
+  align-items: flex-start;
+}
+
+.person-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  flex: 1; /* Takes remaining space */
+}
+
+.person-avatar {
+  width: 72px;
+  height: 72px;
+  min-width: 72px; /* Prevents shrinking */
+  min-height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.person-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-details {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.person-name {
+  font-weight: 700;
+  color: #111827;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  min-height: 18px; /* Fixed height for alignment */
+}
+
+.person-title {
+  font-style: italic;
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  min-height: 20px; /* Fixed height for alignment */
+}
+
+.person-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+  min-height: 24px; /* Fixed height for each contact line */
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+  color: #6b7280;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+}
+
+.contact-item span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+}
+
+/* Hover Effects */
+.contact-item:hover {
+  color: #111827;
+}
+
+.contact-item:hover svg {
+  color: #16a34a;
+}
+
+/* Extra Large Screens: 1920px+ */
+@media (min-width: 1920px) {
+  .contact-persons-container {
+    gap: 96px;
+    padding-top: 72px;
+    margin-top: 72px;
+  }
+
+  .person-heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 24px;
+  }
+
+  .person-description {
+    font-size: 16px;
+    margin-bottom: 36px;
+    min-height: 84px;
+  }
+
+  .person-avatar {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+
+  .person-name {
+    min-height: 20px;
+  }
+
+  .person-title {
+    min-height: 22px;
+  }
+
+  .contact-item {
+    font-size: 15px;
+    gap: 12px;
+    min-height: 26px;
+  }
+
+  .contact-item svg {
+    width: 15px;
+    height: 15px;
+    min-width: 15px;
+  }
+}
+
+/* Desktop: 1600px - 1919px */
+@media (min-width: 1600px) and (max-width: 1919px) {
+  .contact-persons-container {
+    gap: 88px;
+    padding-top: 68px;
+    margin-top: 68px;
+  }
+
+  .person-heading {
+    font-size: 17px;
+    min-height: 23px;
+  }
+
+  .person-description {
+    min-height: 82px;
+  }
+
+  .person-avatar {
+    width: 76px;
+    height: 76px;
+    min-width: 76px;
+    min-height: 76px;
+  }
+
+  .contact-item {
+    min-height: 25px;
+  }
+}
+
+/* Standard Desktop: 1440px - 1599px */
+@media (min-width: 1440px) and (max-width: 1599px) {
+  .contact-persons-container {
+    gap: 80px;
+    padding-top: 64px;
+    margin-top: 64px;
+  }
+
+  .person-heading {
+    min-height: 22px;
+  }
+
+  .person-description {
+    min-height: 80px;
+  }
+
+  .person-avatar {
+    width: 74px;
+    height: 74px;
+    min-width: 74px;
+    min-height: 74px;
+  }
+}
+
+/* Medium Desktop: 1280px - 1439px */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .contact-persons-container {
+    gap: 72px;
+    padding-top: 60px;
+    margin-top: 60px;
+  }
+
+  .person-description {
+    min-height: 78px;
+  }
+}
+
+/* Small Desktop: 1024px - 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .contact-persons-container {
+    gap: 56px;
+    padding-top: 52px;
+    margin-top: 52px;
+  }
+
+  .person-heading {
+    min-height: 22px;
+  }
+
+  .person-description {
+    font-size: 14px;
+    margin-bottom: 28px;
+    min-height: 76px;
+  }
+
+  .person-avatar {
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    min-height: 68px;
+  }
+
+  .person-name {
+    min-height: 18px;
+  }
+
+  .person-title {
+    min-height: 20px;
+  }
+
+  .contact-item {
+    min-height: 23px;
+  }
+}
+
+/* Tablets: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-persons-container {
+    gap: 48px;
+    padding-top: 48px;
+    margin-top: 48px;
+  }
+
+  .person-heading {
+    min-height: 22px;
+  }
+
+  .person-description {
+    min-height: 78px;
+  }
+
+  .person-avatar {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+  }
+}
+
+/* Tablets (Portrait): 600px - 767px */
+@media (min-width: 600px) and (max-width: 767px) {
+  .contact-persons-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    margin-top: 40px;
+    align-items: flex-start;
+  }
+
+  .person-section {
+    height: auto;
+  }
+
+  .person-heading {
+    min-height: auto;
+  }
+
+  .person-description {
+    min-height: auto;
+  }
+
+  .person-name {
+    min-height: auto;
+  }
+
+  .person-title {
+    min-height: auto;
+  }
+
+  .contact-item {
+    min-height: auto;
+  }
+}
+
+/* Mobile: 480px - 599px */
+@media (min-width: 480px) and (max-width: 599px) {
+  .contact-persons-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 36px;
+    margin-top: 36px;
+    align-items: flex-start;
+  }
+
+  .person-section {
+    height: auto;
+  }
+
+  .person-card {
+    gap: 16px;
+  }
+
+  .person-heading {
+    min-height: auto;
+  }
+
+  .person-description {
+    min-height: auto;
+  }
+
+  .person-name {
+    min-height: auto;
+  }
+
+  .person-title {
+    min-height: auto;
+  }
+
+  .contact-item {
+    min-height: auto;
+  }
+}
+
+/* Small Mobile: Below 480px */
+@media (max-width: 479px) {
+  .contact-persons-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 32px;
+    margin-top: 32px;
+    align-items: flex-start;
+  }
+
+  .person-section {
+    height: auto;
+  }
+  
+  .person-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .person-avatar {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    min-height: 72px;
+  }
+
+  .person-description {
+    margin-bottom: 24px;
+    min-height: auto;
+  }
+
+  .person-heading {
+    min-height: auto;
+  }
+
+  .person-name {
+    min-height: auto;
+  }
+
+  .person-title {
+    min-height: auto;
+  }
+
+  .contact-item {
+    min-height: auto;
+  }
+}
+
+/* Extra Small Mobile: Below 400px */
+@media (max-width: 399px) {
+  .contact-persons-container {
+    gap: 28px;
+    padding-top: 28px;
+    margin-top: 28px;
+  }
+  
+  .person-card {
+    gap: 14px;
+  }
+
+  .contact-item {
+    gap: 8px;
+  }
+}

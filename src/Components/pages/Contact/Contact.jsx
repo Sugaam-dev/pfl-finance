@@ -2,23 +2,26 @@ import React from 'react';
 import ContactInfo from './ContactInfo';
 import ContactPersons from './ContactPersons';
 import FeedbackForm from './FeedbackForm';
+import './Style/ContactPage.css';
 
-const Contact = () => {
+const ContactPage = () => {
   return (
-    <div className="min-h-screen grid lg:grid-cols-[60%_40%]">
-      
-      {/* LEFT SECTION - Contact Information */}
-      <div className="bg-white px-20 py-16">
-        <ContactInfo />
-        <ContactPersons />
-      </div>
+    <div className="contact-page-wrapper">
+      <div className="contact-page">
+        
+        {/* LEFT SECTION - Contact Information */}
+        <div className="contact-section">
+          <ContactInfo />
+          <ContactPersons />
+        </div>
 
-      {/* RIGHT SECTION - Feedback Form */}
-      <div className="bg-[#ebebeb] px-16 py-16 flex items-center">
-        <FeedbackForm />
+        {/* RIGHT SECTION - Feedback Form */}
+        <div className="form-section">
+          <FeedbackForm />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default ContactPage;

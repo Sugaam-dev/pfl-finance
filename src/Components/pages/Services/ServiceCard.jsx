@@ -13,7 +13,7 @@ export default function ServiceCard({ image , label, description }) {
           <a className="read-more" href="#" aria-label="Read more about this service">
             <span>know More</span>
             <span className="arrow" aria-hidden="true">
-              ➜
+              ➜  
             </span>
           </a>
         </div>

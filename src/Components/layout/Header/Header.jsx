@@ -78,6 +78,28 @@ const Header = () => {
                 Contact
               </Link>
             </li>
+
+            {/* Mobile only - Location and Social Icons */}
+            <li className="nav-item mobile-contact-section">
+              <div className="mobile-location">
+                <MapPin size={18} />
+                <span>Mumbai, India</span>
+              </div>
+              <div className="mobile-social-icons">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon" aria-label="Facebook">
+                  <Facebook size={18} />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon" aria-label="Twitter">
+                  <Twitter size={18} />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon" aria-label="LinkedIn">
+                  <Linkedin size={18} />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon" aria-label="Instagram">
+                  <Instagram size={18} />
+                </a>
+              </div>
+            </li>
           </ul>
 
           <div className="nav-right">

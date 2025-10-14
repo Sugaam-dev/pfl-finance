@@ -1,11 +1,770 @@
-import React from 'react'
 
-function About() {
+// "use client"
+// import { useState, useMemo } from "react"
+// import "./about.css"
+
+// // ---- Icons (inline SVG, coded – no image links) ----
+// function Icon({ name }) {
+//   const blue = "#0a4b8f"
+//   const coral = "#ef6d64"
+//   const stroke = 2
+//   const common = { fill: "none", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: stroke }
+
+//   if (name === "environment") {
+//     return (
+//       <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+//         <path d="M16 64c8 6 14 9 26 9m38-9c-8 6-14 9-26 9" stroke={coral} {...common} />
+//         <path d="M20 68c3 6 10 12 22 12M76 68c-3 6-10 12-22 12" stroke={coral} {...common} />
+//         <circle cx="48" cy="38" r="20" stroke={blue} {...common} />
+//         <path d="M36 40c6-2 6-6 10-6s6 4 12 4M34 34c2-6 10-8 14-6M54 48c4-2 8-6 8-10" stroke={blue} {...common} />
+//       </svg>
+//     )
+//   }
+//   if (name === "consumer") {
+//     return (
+//       <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+//         <rect x="16" y="30" width="24" height="36" rx="3" stroke={coral} {...common} />
+//         <path d="M20 30v-4a6 6 0 0 1 6-6h8a6 6 0 0 1 6 6v4" stroke={coral} {...common} />
+//         <rect x="46" y="28" width="14" height="38" rx="3" stroke={blue} {...common} />
+//         <path d="M53 22v6M64 26h12v40H64zM64 26l6-6l6 6" stroke={blue} {...common} />
+//       </svg>
+//     )
+//   }
+//   if (name === "aviation") {
+//     return (
+//       <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+//         <path d="M16 50l64-16l-18 20l-18-4l-12 12l-4-12z" stroke={blue} {...common} />
+//         <path d="M68 24c3 0 6 2 6 5" stroke={coral} {...common} />
+//         <path d="M76 36c3 0 6 2 6 5" stroke={coral} {...common} />
+//       </svg>
+//     )
+//   }
+//   if (name === "finance") {
+//     return (
+//       <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+//         <rect x="18" y="52" width="8" height="16" rx="1.5" stroke={blue} {...common} />
+//         <rect x="32" y="46" width="8" height="22" rx="1.5" stroke={blue} {...common} />
+//         <rect x="46" y="58" width="8" height="10" rx="1.5" stroke={blue} {...common} />
+//         <circle cx="62" cy="40" r="8" stroke={coral} {...common} />
+//         <path d="M60 40h4M62 36v8" stroke={coral} {...common} />
+//         <circle cx="76" cy="48" r="8" stroke={coral} {...common} />
+//         <path d="M74 48h4M76 44v8" stroke={coral} {...common} />
+//       </svg>
+//     )
+//   }
+//   if (name === "transport") {
+//     return (
+//       <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+//         <rect x="16" y="44" width="44" height="22" rx="3" stroke={blue} {...common} />
+//         <path d="M60 50h10l10 8v8H60" stroke={blue} {...common} />
+//         <circle cx="30" cy="72" r="6" stroke={blue} {...common} />
+//         <circle cx="66" cy="72" r="6" stroke={blue} {...common} />
+//         <path d="M44 58l4 4l8-8" stroke={coral} {...common} />
+//       </svg>
+//     )
+//   }
+//   // strategic
+//   return (
+//     <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+//       <polyline points="20,70 20,54 30,54 30,70" stroke={blue} {...common} />
+//       <polyline points="36,70 36,46 46,46 46,70" stroke={blue} {...common} />
+//       <polyline points="52,70 52,38 62,38 62,70" stroke={blue} {...common} />
+//       <path d="M30 30l12 6l14-10l10 6" stroke={coral} {...common} />
+//       <path d="M66 32l8 4" stroke={coral} {...common} />
+//     </svg>
+//   )
+// }
+
+// function StandForItem({ icon, title, children }) {
+//   return (
+//     <article className="sf-item">
+//       <div className="sf-icon-wrap" aria-hidden="true">
+//         <span className="sf-hatch" />
+//         <Icon name={icon} />
+//       </div>
+//       <div className="sf-copy">
+//         <h3 className="sf-title">{title}</h3>
+//         <p className="sf-text">{children}</p>
+//       </div>
+//     </article>
+//   )
+// }
+
+// // ---- Tabbed "What do we Stand for?" ----
+// function StandForTabs() {
+//   const [tab, setTab] = useState("other") // other | financial | consulting
+
+//   // Base items and copy (kept exactly like your existing section)
+//   const items = useMemo(
+//     () => ({
+//       environment: {
+//         icon: "environment",
+//         title: "ENVIRONMENT",
+//         text: "Woke raw denim seitan post-ironic, twee flannel bicycle rights gastropub direct trade sriracha",
+//       },
+//       consumer: {
+//         icon: "consumer",
+//         title: "CUNSUMER PRODUCTS",
+//         text: "Woke raw denim seitan post-ironic, twee flannel bicycle rights gastropub direct trade sriracha",
+//       },
+//       aviation: {
+//         icon: "aviation",
+//         title: "TRAVEL AND AVIATION",
+//         text: "Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of. Sartorial leggings butcher pork",
+//       },
+//       finance: {
+//         icon: "finance",
+//         title: "FINANCIAL SERVICES",
+//         text: "Truffaut tumeric forage polaroid tacos before they sold out gluten-free loko synth pabst gentrify.",
+//       },
+//       transport: {
+//         icon: "transport",
+//         title: "SURFACE TRANSPORT",
+//         text: "Cronut semiotics portland, truffaut tumeric forage polaroid tacos before they sold out gluten-free",
+//       },
+//       strategic: {
+//         icon: "strategic",
+//         title: "STRATEGIC PLANNING",
+//         text: "Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of. squid vinyl leggings butcher pork",
+//       },
+//     }),
+//     [],
+//   )
+
+//   // Orders:
+//   // - other: exactly your current order
+//   const otherOrder = ["environment", "consumer", "aviation", "finance", "transport", "strategic"]
+//   // - financial: matches your first image (row1: aviation, strategic, consumer; row2: transport, environment, finance)
+//   const financialOrder = ["aviation", "strategic", "consumer", "transport", "environment", "finance"]
+//   // - consulting: matches your second image (row1: consumer, transport, environment; row2: aviation, finance, strategic)
+//   const consultingOrder = ["consumer", "transport", "environment", "aviation", "finance", "strategic"]
+
+//   const order = tab === "financial" ? financialOrder : tab === "consulting" ? consultingOrder : otherOrder
+//   const panelId = `panel-${tab}`
+
+//   return (
+//     <section className="standfor" aria-labelledby="standfor-title">
+//       <h2 id="standfor-title" className="standfor-heading">
+//         What do we Stand for?
+//       </h2>
+
+//       <div className="standfor-tabs" role="tablist" aria-label="Stand for categories">
+//         <button
+//           id="tab-financial"
+//           className={`sf-tab ${tab === "financial" ? "sf-tab--active" : ""}`}
+//           role="tab"
+//           aria-selected={tab === "financial"}
+//           aria-controls="panel-financial"
+//           onClick={() => setTab("financial")}
+//         >
+//           Financial
+//         </button>
+//         <button
+//           id="tab-consulting"
+//           className={`sf-tab ${tab === "consulting" ? "sf-tab--active" : ""}`}
+//           role="tab"
+//           aria-selected={tab === "consulting"}
+//           aria-controls="panel-consulting"
+//           onClick={() => setTab("consulting")}
+//         >
+//           Consulting
+//         </button>
+//         <button
+//           id="tab-other"
+//           className={`sf-tab ${tab === "other" ? "sf-tab--active" : ""}`}
+//           role="tab"
+//           aria-selected={tab === "other"}
+//           aria-controls="panel-other"
+//           onClick={() => setTab("other")}
+//         >
+//           Other Solution
+//         </button>
+//       </div>
+
+//       <div id={panelId} role="tabpanel" aria-labelledby={`tab-${tab}`} className="standfor-grid">
+//         {order.map((key) => {
+//           const i = items[key]
+//           return (
+//             <StandForItem key={key} icon={i.icon} title={i.title}>
+//               {i.text}
+//             </StandForItem>
+//           )
+//         })}
+//       </div>
+
+//       <div className="sf-triangle" aria-hidden="true" />
+//     </section>
+//   )
+// }
+
+// // ---- Small shared UI ----
+// function Stat({ value, label }) {
+//   return (
+//     <div className="stat">
+//       <div className="stat-circle">
+//         <span className="stat-value">{value}</span>
+//       </div>
+//       <p className="stat-label">{label}</p>
+//     </div>
+//   )
+// }
+
+// function IndiaMap() {
+//   const dots = [
+//     { top: "26%", left: "50%", name: "Delhi" },
+//     { top: "60%", left: "32%", name: "Mumbai" },
+//     { top: "72%", left: "43%", name: "Bengaluru" },
+//     { top: "76%", left: "48%", name: "Chennai" },
+//     { top: "45%", left: "65%", name: "Kolkata" },
+//     { top: "62%", left: "52%", name: "Hyderabad" },
+//   ]
+//   return (
+//     <div className="india-map" role="img" aria-label="Map of India with office locations">
+//       <img src="/images/india-map.jpg" alt="Vector outline map of India" className="india-svg" />
+//       {dots.map((d, i) => (
+//         <div className="map-dot" style={{ top: d.top, left: d.left }} key={i}>
+//           <span className="sr-only">{d.name}</span>
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
+
+// // ---- Page ----
+// export default function About() {
+//   return (
+//     <main className="rb-container">
+//       {/* HERO (unchanged structure) */}
+//       <section className="hero" aria-labelledby="rb-title">
+//         <div className="hero-media">
+//           <img
+//             src="/images/hero-meeting.jpg"
+//             alt="Business team collaborating in a bright meeting room"
+//             className="hero-img"
+//             loading="eager"
+//           />
+//           <div className="media-decor decor-1" aria-hidden="true" />
+//         </div>
+//         <div className="hero-content">
+//           <h1 id="rb-title" className="title text-balance">
+//             Ready Business and Finance Solutions
+//           </h1>
+//           <p className="lead">
+//             We stand with a commitment to agility and integrity across diverse organizations, bringing a passion for
+//             client success. Our range of services is tailored individually for each company—no matter how complex the
+//             task.
+//           </p>
+//           <ul className="hero-points">
+//             <li>Tailored financial strategies</li>
+//             <li>Cross-industry expertise</li>
+//             <li>Long-term partnership mindset</li>
+//           </ul>
+//         </div>
+//       </section>
+
+//       {/* What do we Stand for? with tabs */}
+//       <StandForTabs />
+
+//       {/* EXPERTS (unchanged structure) */}
+//       <section className="experts" aria-labelledby="experts-title">
+//         <div className="experts-header">
+//           <h2 id="experts-title" className="section-title text-balance">
+//             Working with <span className="accent">experts</span> around the India
+//           </h2>
+//           {/* <p className="experts-sub">
+//             Our distributed teams collaborate across key Indian hubs to deliver high-impact outcomes.
+//           </p> */}
+//         </div>
+//         <IndiaMap />
+//         <div className="stats">
+//           <Stat value="25%" label="Travel & Aviation" />
+//           <Stat value="63%" label="Strategic Planning" />
+//           <Stat value="90%" label="Client Satisfaction" />
+//         </div>
+//       </section>
+
+//       {/* STORY (unchanged) */}
+//       <section className="story" aria-labelledby="story-title">
+//         <div className="story-bg" />
+//         <h2 id="story-title" className="section-title invert">
+//           Our story
+//         </h2>
+//         <ol className="timeline" aria-label="Company milestones">
+//           <li className="timeline-item">
+//             <div className="dot" />
+//             <div className="year">2008</div>
+//             <p>Company foundation. Early wins across finance and operations.</p>
+//           </li>
+//           <li className="timeline-item">
+//             <div className="dot" />
+//             <div className="year">2009</div>
+//             <p>New products expansion. Built data-backed frameworks.</p>
+//           </li>
+//           <li className="timeline-item">
+//             <div className="dot" />
+//             <div className="year">2011</div>
+//             <p>Enterprise collaboration. Scaled delivery with reliability.</p>
+//           </li>
+//           <li className="timeline-item">
+//             <div className="dot" />
+//             <div className="year">2013</div>
+//             <p>Customer care support. Continuous improvement culture.</p>
+//           </li>
+//         </ol>
+//       </section>
+
+//       {/* TEAM (unchanged) */}
+//       <section className="team" aria-labelledby="team-title">
+//         <h2 id="team-title" className="section-title text-balance">
+//           Meet our <span className="accent">team</span>
+//         </h2>
+//         <div className="team-grid">
+//           {[
+//             { name: "Andy Kochar", role: "Account Director", img: "/images/teams/andy.jpg" },
+//             { name: "Clark Robarts", role: "Chief Product Officer", img: "/images/teams/clark.jpg" },
+//             { name: "Ashley Henry", role: "Marketing Director", img: "/images/teams/ashley.jpg" },
+//             { name: "Dennis Norris", role: "Finance Lead", img: "/images/teams/dennis.jpg" },
+//             { name: "Gina Kennedy", role: "Art Director", img: "/images/teams/gina.jpg" },
+//             { name: "Fernando Torres", role: "Operations", img: "/images/teams/fernando.jpg" },
+//             { name: "Claudette Franco", role: "Business Analyst", img: "/images/teams/claudette.jpg" },
+//             { name: "Jonathan Adams", role: "Consultant", img: "/images/teams/jonathan.jpg" },
+//           ].map((m, i) => (
+//             <article className="member" key={i}>
+//               <img
+//                 src={m.img || "/placeholder.svg"}
+//                 alt={`${m.name} - ${m.role}`}
+//                 className="member-photo"
+//                 loading="lazy"
+//               />
+//               <div className="member-info">
+//                 <h3 className="member-name">{m.name}</h3>
+//                 <p className="member-role">{m.role}</p>
+//               </div>
+//             </article>
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* TESTIMONIALS (unchanged) */}
+//       <section className="testimonials" aria-labelledby="testimonials-title">
+//         <h2 id="testimonials-title" className="section-title text-balance">
+//           Clients <span className="accent">Feedback</span>
+//         </h2>
+//         <div className="testi-grid">
+//           <figure className="testi-card">
+//             <blockquote>
+//               Consulting Pro rapidly aligned with our financial goals. Their presentations were clear and actionable.
+//             </blockquote>
+//             <figcaption>
+//               <img src="/images/team/ashley.jpg" alt="" className="avatar" />
+//               <div>
+//                 <div className="person">Amanda Seyfried</div>
+//                 <div className="meta">Sales Manager, Atlanta</div>
+//               </div>
+//             </figcaption>
+//           </figure>
+//           <figure className="testi-card">
+//             <blockquote>
+//               When stakes were high, their process kept us on track. We’ve been agile and efficient ever since.
+//             </blockquote>
+//             <figcaption>
+//               <img src="/images/team/clark.jpg" alt="" className="avatar" />
+//               <div>
+//                 <div className="person">Donald Simpson</div>
+//                 <div className="meta">Ecommerce Director, Sydney</div>
+//               </div>
+//             </figcaption>
+//           </figure>
+//           <figure className="testi-card">
+//             <blockquote>They know how to remove friction. The team is decisive and partner-oriented.</blockquote>
+//             <figcaption>
+//               <img src="/images/team/dennis.jpg" alt="" className="avatar" />
+//               <div>
+//                 <div className="person">Christian Marcil</div>
+//                 <div className="meta">Operations Lead, Singapore</div>
+//               </div>
+//             </figcaption>
+//           </figure>
+//         </div>
+//       </section>
+//     </main>
+//   )
+// }
+
+
+
+
+
+
+
+"use client"
+import { useState, useMemo } from "react";
+import "./about.css";
+import ProgressDonut from "../../ProgressDonut";
+import ClientsFeedback from "../../ClientsFeedback";
+import StoryTimeline from "./StoryTimeline";
+import Logos from "../../Logos";
+// import ProgressDonut from "../../Components/ProgressDonut.jsx";
+// import ClientsFeedback from "../../Components/ClientsFeedback.jsx";
+
+// ---- Icons (inline SVG, coded – no image links) ----
+function Icon({ name }) {
+  const blue = "#0a4b8f"
+  const coral = "#ef6d64"
+  const stroke = 2
+  const common = { fill: "none", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: stroke }
+
+  if (name === "environment") {
+    return (
+      <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+        <path d="M16 64c8 6 14 9 26 9m38-9c-8 6-14 9-26 9" stroke={coral} {...common} />
+        <path d="M20 68c3 6 10 12 22 12M76 68c-3 6-10 12-22 12" stroke={coral} {...common} />
+        <circle cx="48" cy="38" r="20" stroke={blue} {...common} />
+        <path d="M36 40c6-2 6-6 10-6s6 4 12 4M34 34c2-6 10-8 14-6M54 48c4-2 8-6 8-10" stroke={blue} {...common} />
+      </svg>
+    )
+  }
+  if (name === "consumer") {
+    return (
+      <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+        <rect x="16" y="30" width="24" height="36" rx="3" stroke={coral} {...common} />
+        <path d="M20 30v-4a6 6 0 0 1 6-6h8a6 6 0 0 1 6 6v4" stroke={coral} {...common} />
+        <rect x="46" y="28" width="14" height="38" rx="3" stroke={blue} {...common} />
+        <path d="M53 22v6M64 26h12v40H64zM64 26l6-6l6 6" stroke={blue} {...common} />
+      </svg>
+    )
+  }
+  if (name === "aviation") {
+    return (
+      <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+        <path d="M16 50l64-16l-18 20l-18-4l-12 12l-4-12z" stroke={blue} {...common} />
+        <path d="M68 24c3 0 6 2 6 5" stroke={coral} {...common} />
+        <path d="M76 36c3 0 6 2 6 5" stroke={coral} {...common} />
+      </svg>
+    )
+  }
+  if (name === "finance") {
+    return (
+      <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+        <rect x="18" y="52" width="8" height="16" rx="1.5" stroke={blue} {...common} />
+        <rect x="32" y="46" width="8" height="22" rx="1.5" stroke={blue} {...common} />
+        <rect x="46" y="58" width="8" height="10" rx="1.5" stroke={blue} {...common} />
+        <circle cx="62" cy="40" r="8" stroke={coral} {...common} />
+        <path d="M60 40h4M62 36v8" stroke={coral} {...common} />
+        <circle cx="76" cy="48" r="8" stroke={coral} {...common} />
+        <path d="M74 48h4M76 44v8" stroke={coral} {...common} />
+      </svg>
+    )
+  }
+  if (name === "transport") {
+    return (
+      <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+        <rect x="16" y="44" width="44" height="22" rx="3" stroke={blue} {...common} />
+        <path d="M60 50h10l10 8v8H60" stroke={blue} {...common} />
+        <circle cx="30" cy="72" r="6" stroke={blue} {...common} />
+        <circle cx="66" cy="72" r="6" stroke={blue} {...common} />
+        <path d="M44 58l4 4l8-8" stroke={coral} {...common} />
+      </svg>
+    )
+  }
+  // strategic
   return (
-    <div>
-      
+    <svg viewBox="0 0 96 96" className="sf-icon" aria-hidden="true">
+      <polyline points="20,70 20,54 30,54 30,70" stroke={blue} {...common} />
+      <polyline points="36,70 36,46 46,46 46,70" stroke={blue} {...common} />
+      <polyline points="52,70 52,38 62,38 62,70" stroke={blue} {...common} />
+      <path d="M30 30l12 6l14-10l10 6" stroke={coral} {...common} />
+      <path d="M66 32l8 4" stroke={coral} {...common} />
+    </svg>
+  )
+}
+
+function StandForItem({ icon, title, children }) {
+  return (
+    <article className="sf-item">
+      <div className="sf-icon-wrap" aria-hidden="true">
+        <span className="sf-hatch" />
+        <Icon name={icon} />
+      </div>
+      <div className="sf-copy">
+        <h3 className="sf-title">{title}</h3>
+        <p className="sf-text">{children}</p>
+      </div>
+    </article>
+  )
+}
+
+// ---- Tabbed "What do we Stand for?" ----
+function StandForTabs() {
+  const [tab, setTab] = useState("other") // other | financial | consulting
+
+  // Base items and copy (kept exactly like your existing section)
+  const items = useMemo(
+    () => ({
+      environment: {
+        icon: "environment",
+        title: "ENVIRONMENT",
+        text: "Woke raw denim seitan post-ironic, twee flannel bicycle rights gastropub direct trade sriracha",
+      },
+      consumer: {
+        icon: "consumer",
+        title: "CUNSUMER PRODUCTS",
+        text: "Woke raw denim seitan post-ironic, twee flannel bicycle rights gastropub direct trade sriracha",
+      },
+      aviation: {
+        icon: "aviation",
+        title: "TRAVEL AND AVIATION",
+        text: "Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of. Sartorial leggings butcher pork",
+      },
+      finance: {
+        icon: "finance",
+        title: "FINANCIAL SERVICES",
+        text: "Truffaut tumeric forage polaroid tacos before they sold out gluten-free loko synth pabst gentrify.",
+      },
+      transport: {
+        icon: "transport",
+        title: "SURFACE TRANSPORT",
+        text: "Cronut semiotics portland, truffaut tumeric forage polaroid tacos before they sold out gluten-free",
+      },
+      strategic: {
+        icon: "strategic",
+        title: "STRATEGIC PLANNING",
+        text: "Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of. squid vinyl leggings butcher pork",
+      },
+    }),
+    [],
+  )
+
+  // Orders:
+  // - other: exactly your current order
+  const otherOrder = ["environment", "consumer", "aviation", "finance", "transport", "strategic"]
+  // - financial: matches your first image (row1: aviation, strategic, consumer; row2: transport, environment, finance)
+  const financialOrder = ["aviation", "strategic", "consumer", "transport", "environment", "finance"]
+  // - consulting: matches your second image (row1: consumer, transport, environment; row2: aviation, finance, strategic)
+  const consultingOrder = ["consumer", "transport", "environment", "aviation", "finance", "strategic"]
+
+  const order = tab === "financial" ? financialOrder : tab === "consulting" ? consultingOrder : otherOrder
+  const panelId = `panel-${tab}`
+
+  return (
+    <section className="standfor" aria-labelledby="standfor-title">
+      <h2 id="standfor-title" className="standfor-heading">
+        What do we Stand for?
+      </h2>
+
+      <div className="standfor-tabs" role="tablist" aria-label="Stand for categories">
+        <button
+          id="tab-financial"
+          className={`sf-tab ${tab === "financial" ? "sf-tab--active" : ""}`}
+          role="tab"
+          aria-selected={tab === "financial"}
+          aria-controls="panel-financial"
+          onClick={() => setTab("financial")}
+        >
+          Financial
+        </button>
+        <button
+          id="tab-consulting"
+          className={`sf-tab ${tab === "consulting" ? "sf-tab--active" : ""}`}
+          role="tab"
+          aria-selected={tab === "consulting"}
+          aria-controls="panel-consulting"
+          onClick={() => setTab("consulting")}
+        >
+          Consulting
+        </button>
+        <button
+          id="tab-other"
+          className={`sf-tab ${tab === "other" ? "sf-tab--active" : ""}`}
+          role="tab"
+          aria-selected={tab === "other"}
+          aria-controls="panel-other"
+          onClick={() => setTab("other")}
+        >
+          Other Solution
+        </button>
+      </div>
+
+      <div id={panelId} role="tabpanel" aria-labelledby={`tab-${tab}`} className="standfor-grid">
+        {order.map((key) => {
+          const i = items[key]
+          return (
+            <StandForItem key={key} icon={i.icon} title={i.title}>
+              {i.text}
+            </StandForItem>
+          )
+        })}
+      </div>
+
+      <div className="sf-triangle" aria-hidden="true" />
+    </section>
+  )
+}
+
+// ---- Small shared UI ----
+function Stat({ value, label }) {
+  return (
+    <div className="stat">
+      <div className="stat-circle">
+        <span className="stat-value">{value}</span>
+      </div>
+      <p className="stat-label">{label}</p>
     </div>
   )
 }
 
-export default About
+function IndiaMap() {
+  const dots = [
+    { top: "26%", left: "50%", name: "Delhi" },
+    { top: "60%", left: "32%", name: "Mumbai" },
+    { top: "72%", left: "43%", name: "Bengaluru" },
+    { top: "76%", left: "48%", name: "Chennai" },
+    { top: "45%", left: "65%", name: "Kolkata" },
+    { top: "62%", left: "52%", name: "Hyderabad" },
+  ]
+  return (
+    <div className="india-map" role="img" aria-label="Map of India with office locations">
+      <img src="/images/india-map.jpg" alt="Vector outline map of India" className="india-svg" />
+      {dots.map((d, i) => (
+        <div className="map-dot" style={{ top: d.top, left: d.left }} key={i}>
+          <span className="sr-only">{d.name}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// ---- Page ----
+export default function About() {
+  return (
+    <main className="rb-container">
+      {/* HERO (unchanged structure) */}
+      <section className="hero" aria-labelledby="rb-title">
+        <div className="hero-media">
+          <img
+            src="/images/hero-meeting.jpg"
+            alt="Business team collaborating in a bright meeting room"
+            className="hero-img"
+            loading="eager"
+          />
+          <div className="media-decor decor-1" aria-hidden="true" />
+        </div>
+        <div className="hero-content">
+          <h1 id="rb-title" className="title text-balance">
+            Ready Business and Finance Solutions
+          </h1>
+          <p className="lead">
+            We stand with a commitment to agility and integrity across diverse organizations, bringing a passion for
+            client success. Our range of services is tailored individually for each company—no matter how complex the
+            task.
+          </p>
+          <ul className="hero-points">
+            <li>Tailored financial strategies</li>
+            <li>Cross-industry expertise</li>
+            <li>Long-term partnership mindset</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* What do we Stand for? with tabs */}
+      <StandForTabs />
+
+      {/* EXPERTS (unchanged header, map) */}
+      <section className="experts" aria-labelledby="experts-title">
+        <div className="experts-header">
+          <h2 id="experts-title" className="section-title text-balance">
+            Working with <span className="accent">experts</span> around the India
+          </h2>
+          {/* <p className="experts-sub">
+            Our distributed teams collaborate across key Indian hubs to deliver high-impact outcomes.
+          </p> */}
+        </div>
+        <IndiaMap />
+        <div className="donut-row">
+          <ProgressDonut
+            value={25}
+            label="TRAVEL AND AVIATION"
+            description="Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of."
+          />
+          <ProgressDonut
+            value={63}
+            label="STRATEGIC PLANNING"
+            description="Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of."
+          />
+          <ProgressDonut
+            value={90}
+            label="TRAVEL AND AVIATION"
+            description="Normcore cornhole synth, keffiyeh asymmetrical vaporware hell of."
+          />
+        </div>
+      </section>
+
+      {/* STORY (unchanged) */}
+      {/* <section className="story" aria-labelledby="story-title">
+        <div className="story-bg" />
+        <h2 id="story-title" className="section-title invert">
+          Our story
+        </h2>
+        <ol className="timeline" aria-label="Company milestones">
+          <li className="timeline-item">
+            <div className="dot" />
+            <div className="year">2008</div>
+            <p>Company foundation. Early wins across finance and operations.</p>
+          </li>
+          <li className="timeline-item">
+            <div className="dot" />
+            <div className="year">2009</div>
+            <p>New products expansion. Built data-backed frameworks.</p>
+          </li>
+          <li className="timeline-item">
+            <div className="dot" />
+            <div className="year">2011</div>
+            <p>Enterprise collaboration. Scaled delivery with reliability.</p>
+          </li>
+          <li className="timeline-item">
+            <div className="dot" />
+            <div className="year">2013</div>
+            <p>Customer care support. Continuous improvement culture.</p>
+          </li>
+        </ol>
+      </section> */}
+      <StoryTimeline />
+
+      {/* TEAM (unchanged) */}
+      <section className="team" aria-labelledby="team-title">
+        <h2 id="team-title" className="section-title text-balance">
+          Meet our <span className="accent">team</span>
+        </h2>
+        <div className="team-grid">
+          {[
+            { name: "Andy Kochar", role: "Account Director", img: "/images/teams/andy.jpg" },
+            { name: "Clark Robarts", role: "Chief Product Officer", img: "/images/teams/clark.jpg" },
+            { name: "Ashley Henry", role: "Marketing Director", img: "/images/teams/ashley.jpg" },
+            { name: "Dennis Norris", role: "Finance Lead", img: "/images/teams/dennis.jpg" },
+            { name: "Gina Kennedy", role: "Art Director", img: "/images/teams/gina.jpg" },
+            { name: "Fernando Torres", role: "Operations", img: "/images/teams/fernando.jpg" },
+            { name: "Claudette Franco", role: "Business Analyst", img: "/images/teams/claudette.jpg" },
+            { name: "Jonathan Adams", role: "Consultant", img: "/images/teams/jonathan.jpg" },
+          ].map((m, i) => (
+            <article className="member" key={i}>
+              <img
+                src={m.img || "/placeholder.svg"}
+                alt={`${m.name} - ${m.role}`}
+                className="member-photo"
+                loading="lazy"
+              />
+              <div className="member-info">
+                <h3 className="member-name">{m.name}</h3>
+                <p className="member-role">{m.role}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Clients Feedback (new slider) */}
+      <ClientsFeedback />
+      <Logos/>
+    </main>
+  )
+}

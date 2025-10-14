@@ -17,12 +17,12 @@ export default function Logos() {
         <Logo icon={Layers} label="edge" subtitle="edtech" />
       </ul>
 
-      <p className="caption">
+      {/* <p className="caption">
         <span className="year">© 2025</span>
         <span className="brand">CONSULTING</span>
         <span className="sep"> Theme for WordPress by </span>
         <span className="brand">STYLEMIXTHEMES</span>
-      </p>
+      </p> */}
     </section>
   )
 }

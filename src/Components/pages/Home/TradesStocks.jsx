@@ -5,24 +5,24 @@ import './styles/TradesStocks.css';
 
 const TradesStocks = () => {
   const chartData = [
-    { month: 'JAN', One: 10, Two: 25 },
-    { month: 'FEB', One: 15, Two: 18 },
-    { month: 'MAR', One: 20, Two: 16 },
-    { month: 'APR', One: 25, Two: 17 },
-    { month: 'MAY', One: 27, Two: 20 },
-    { month: 'JUN', One: 25, Two: 25 },
-    { month: 'JUL', One: 23, Two: 30 },
-    { month: 'AUG', One: 25, Two: 35 }
+    { month: 'JAN', LoanClosed: 10, LoanApproval: 25 },
+    { month: 'FEB', LoanClosed: 15, LoanApproval: 18 },
+    { month: 'MAR', LoanClosed: 20, LoanApproval: 16 },
+    { month: 'APR', LoanClosed: 25, LoanApproval: 17 },
+    { month: 'MAY', LoanClosed: 27, LoanApproval: 20 },
+    { month: 'JUN', LoanClosed: 25, LoanApproval: 25 },
+    { month: 'JUL', LoanClosed: 23, LoanApproval: 30 },
+    { month: 'AUG', LoanClosed: 25, LoanApproval: 35 }
   ];
 
   const resources = [
-    { name: 'Don James/Semplice', description: 'Article and News research' },
-    { name: 'HighVoltageBusiness', description: 'Company and Industry Research' },
-    { name: 'Goovers', description: 'Company and Industry Research' },
-    { name: 'IRISpace', description: 'Industry Research' },
-    { name: 'Lexos-Nexos', description: 'Company, Industry, Market Research' },
-    { name: 'Plombett', description: 'Industry Research' },
-    { name: 'Pronounce', description: 'market analysis report "slices"' }
+    { name: 'Loan Approval' },
+    { name: 'Loan Closed' },
+    { name: 'Loan Emergency' },
+    // { name: 'IRISpace', description: 'Industry Research' },
+    // { name: 'Lexos-Nexos', description: 'Company, Industry, Market Research' },
+    // { name: 'Plombett', description: 'Industry Research' },
+    // { name: 'Pronounce', description: 'market analysis report "slices"' }
   ];
 
   // Custom Tooltip
@@ -45,18 +45,19 @@ const TradesStocks = () => {
   return (
     <section className="trades-stocks-section">
       <div className="trades-stocks-container">
-        <h2 className="trades-stocks-title">Trades & Stocks</h2>
+        <h2 className="trades-stocks-title">Loans</h2>
         <div className="trades-underline"></div>
 
         <div className="trades-content">
           {/* Left Side - Text Content */}
           <div className="trades-text">
             <p className="trades-description">
-              The first thing most investors want to see is a compelling one or two page 
-              executive summary. The goal of an executive summary is to persuade investors to 
-              request a full business plan or pitch deck. However, creating a compelling 
-              executive summary can be at least as challenging as developing a complete 
-              business plan. We have access to fee-based, subscriber-only resources such as:
+                Lenders generally look at a variety of eligibility
+                criteria before approving a loan request. in addition
+                to your credit score, lenders want to see a suitable
+                repayment plan, prove that you have reasonable
+                long-term stability, and examine your
+                employment history:
             </p>
 
             <ul className="resources-list">
@@ -108,14 +109,14 @@ const TradesStocks = () => {
                   }}
                 />
                 <Bar 
-                  dataKey="One" 
+                  dataKey="LoanClosed" 
                   fill="#e57373" 
                   radius={[0, 0, 0, 0]}
                   maxBarSize={40}
                 />
                 <Bar 
-                  dataKey="Two" 
-                  fill="#5c7cfa" 
+                  dataKey="LoanApproval" 
+                  fill="#09c635ff" 
                   radius={[0, 0, 0, 0]}
                   maxBarSize={40}
                 />

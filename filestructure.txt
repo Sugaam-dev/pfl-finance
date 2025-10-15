@@ -72,15 +72,21 @@
                     |-- FeedbackForm.css
                     |-- MapEmbed.css
             |-- Home
-                |-- box-reveal.jsx
-                |-- box-reveal.module.css
-                |-- carousel.jsx
                 |-- EntrepreneurHero.jsx
+                |-- HeroSection.jsx
                 |-- Home.jsx
-                |-- ImageHoverGallery.css
                 |-- ImageHoverGallery.jsx
-                |-- TradesStocks.css
+                |-- RequestCallBack.jsx
+                |-- Styles
+                    |-- HeroSection.css
+                    |-- ImageHoverGallery.css
+                    |-- RequestCallBack.css
+                    |-- TestimonialsTeam.css
+                    |-- TradesStocks.css
+                    |-- WhyChooseUs.css
+                |-- TestimonialsTeam.jsx
                 |-- TradesStocks.jsx
+                |-- WhyChooseUs.jsx
             |-- Services
                 |-- financial-portfolio.jsx
                 |-- images

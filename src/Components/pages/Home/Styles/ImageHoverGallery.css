@@ -41,8 +41,23 @@
 .ih-card:focus .ih-media {
   transform: scale(1.06);
 }
-
 .ih-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 350ms ease;
+  pointer-events: none;
+}
+
+.ih-card:hover .ih-overlay,
+.ih-card:focus .ih-overlay {
+  background: rgba(150, 15, 15, 0.75);
+  height: 100%;
+}
+/* .ih-overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -58,7 +73,7 @@
 .ih-card:focus .ih-overlay {
   height: 100%;
   transform: translateY(-0%);
-}
+} */
 
 .ih-content {
   position: absolute;

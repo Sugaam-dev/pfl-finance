@@ -16,14 +16,14 @@
         |-- slide-3.jpg
         |-- slide-4.jpg
         |-- teams
-            |-- andy.jpg
-            |-- ashley.webp
-            |-- clark.png
-            |-- claudette.jpg
-            |-- dennis.jpg
-            |-- fernando.jpg
-            |-- gina.jpg
-            |-- jonathan.jpg
+            |-- axis.png
+            |-- BankOfMaharashtra.webp
+            |-- boi.jpg
+            |-- idbi.jpg
+            |-- indianoverseas.jpg
+            |-- induslnd.jpg
+            |-- kotak.jpg
+            |-- sbi.jpg
         |-- timeline-bg.jpg
     |-- vite.svg
 |-- README.md

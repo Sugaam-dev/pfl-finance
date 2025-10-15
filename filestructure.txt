@@ -11,6 +11,9 @@
             |-- donald.jpg
         |-- hero-meeting.jpg
         |-- india-map.jpg
+        |-- loan-disbursement.png
+        |-- loan-eligibility.png
+        |-- loan-plan.png
         |-- slide-1.jpg
         |-- slide-2.jpg
         |-- slide-3.jpg
@@ -73,6 +76,10 @@
                 |-- box-reveal.module.css
                 |-- carousel.jsx
                 |-- Home.jsx
+                |-- ImageHoverGallery.css
+                |-- ImageHoverGallery.jsx
+                |-- TradesStocks.css
+                |-- TradesStocks.jsx
             |-- Services
                 |-- financial-portfolio.jsx
                 |-- images

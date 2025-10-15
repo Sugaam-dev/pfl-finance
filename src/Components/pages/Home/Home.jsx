@@ -1,5 +1,7 @@
 import React from "react";
 import Carousel from "./Carousel";
+import ImageHoverGallery from "./ImageHoverGallery";
+import TradesStocks from "./TradesStocks";
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
       {/* Home page hero carousel */}
       {/* <section className="mx-auto max-w-[1400px]"> */}
         <Carousel images={images} />
+        <ImageHoverGallery/>
+        <TradesStocks/>
       {/* </section> */}
     </main>
   );

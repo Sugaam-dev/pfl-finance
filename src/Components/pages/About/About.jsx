@@ -409,14 +409,14 @@ export default function About() {
         </h2>
         <div className="team-grid">
           {[
-            { name: "IDBI Bank", role: "IDBI Bank", img: "/images/teams/andy.jpg" },
-            { name: "Axis Bandk", role: "Axis Bank", img: "/images/teams/clark.png" },
-            { name: "Bank Of Maharashtra", role: "Bank Of Maharashtra", img: "/images/teams/ashley.webp" },
-            { name: "Induslnd Bank", role: "Induslnd Bank", img: "/images/teams/dennis.jpg" },
-            { name: "BOI Bank", role: "BOI Bank", img: "/images/teams/gina.jpg" },
-            { name: "Kotak Bank", role: "Kotak Bank", img: "/images/teams/fernando.jpg" },
-            { name: "Indian Overseas", role: "indian overseas", img: "/images/teams/claudette.jpg" },
-            { name: "SBI Bank", role: "SBI Bank", img: "/images/teams/jonathan.jpg" },
+            { name: "IDBI Bank", role: "IDBI Bank", img: "/images/teams/idbi.jpg" },
+            { name: "Axis Bandk", role: "Axis Bank", img: "/images/teams/axis.png" },
+            { name: "Bank Of Maharashtra", role: "Bank Of Maharashtra", img: "/images/teams/BankOfMaharashtra.webp" },
+            { name: "Induslnd Bank", role: "Induslnd Bank", img: "/images/teams/induslnd.jpg" },
+            { name: "BOI Bank", role: "BOI Bank", img: "/images/teams/boi.jpg" },
+            { name: "Kotak Bank", role: "Kotak Bank", img: "/images/teams/kotak.jpg" },
+            { name: "Indian Overseas", role: "indian overseas", img: "/images/teams/indianoverseas.jpg" },
+            { name: "SBI Bank", role: "SBI Bank", img: "/images/teams/sbi.jpg" },
           ].map((m, i) => (
             <article className="member" key={i}>
               <img

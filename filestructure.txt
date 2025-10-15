@@ -11,19 +11,22 @@
             |-- donald.jpg
         |-- hero-meeting.jpg
         |-- india-map.jpg
+        |-- loan-disbursement.png
+        |-- loan-eligibility.png
+        |-- loan-plan.png
         |-- slide-1.jpg
         |-- slide-2.jpg
         |-- slide-3.jpg
         |-- slide-4.jpg
         |-- teams
-            |-- andy.jpg
-            |-- ashley.webp
-            |-- clark.png
-            |-- claudette.jpg
-            |-- dennis.jpg
-            |-- fernando.jpg
-            |-- gina.jpg
-            |-- jonathan.jpg
+            |-- axis.png
+            |-- BankOfMaharashtra.webp
+            |-- boi.jpg
+            |-- idbi.jpg
+            |-- indianoverseas.jpg
+            |-- induslnd.jpg
+            |-- kotak.jpg
+            |-- sbi.jpg
         |-- timeline-bg.jpg
     |-- vite.svg
 |-- README.md
@@ -72,7 +75,12 @@
                 |-- box-reveal.jsx
                 |-- box-reveal.module.css
                 |-- carousel.jsx
+                |-- EntrepreneurHero.jsx
                 |-- Home.jsx
+                |-- ImageHoverGallery.css
+                |-- ImageHoverGallery.jsx
+                |-- TradesStocks.css
+                |-- TradesStocks.jsx
             |-- Services
                 |-- financial-portfolio.jsx
                 |-- images

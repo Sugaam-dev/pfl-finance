@@ -1,0 +1,108 @@
+.ih-section {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+.ih-container {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.ih-card {
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(12, 18, 31, 0.08);
+  transform: translateY(24px);
+  opacity: 0;
+  transition: transform 650ms cubic-bezier(.22, .9, .32, 1), opacity 650ms ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.ih-card.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ih-media {
+  position: relative;
+  padding-top: 62%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 450ms cubic-bezier(.22, .9, .32, 1);
+}
+
+.ih-card:hover .ih-media,
+.ih-card:focus .ih-media {
+  transform: scale(1.06);
+}
+
+.ih-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 46%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 60%);
+  transition: height 350ms ease, transform 400ms ease;
+  transform: translateY(0%);
+  pointer-events: none;
+}
+
+.ih-card:hover .ih-overlay,
+.ih-card:focus .ih-overlay {
+  height: 100%;
+  transform: translateY(-0%);
+}
+
+.ih-content {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  color: white;
+  transform: translateY(18px);
+  transition: transform 360ms cubic-bezier(.22, .9, .32, 1), opacity 360ms ease;
+  opacity: 0;
+}
+
+.ih-card:hover .ih-content,
+.ih-card:focus .ih-content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.ih-title {
+  margin: 0 0 6px 0;
+  font-size: 1.125rem;
+  line-height: 1.1;
+}
+
+.ih-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+  .ih-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .ih-container {
+    grid-template-columns: 1fr;
+  }
+  .ih-media { padding-top: 56%; }
+  .ih-title { font-size: 1.05rem; }
+}
+
+.ih-card:focus {
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}

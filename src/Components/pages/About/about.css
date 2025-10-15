@@ -87,7 +87,7 @@ section {
   border-radius: calc(var(--radius) * 1.2);
   box-shadow: 0 12px 30px rgba(16, 24, 40, 0.12);
   width: 900px;
-  height: 400px;
+  height: 500px;
 }
 .hero-content .title {
   font-size: 32px;
@@ -163,14 +163,14 @@ section {
   color: #fff;
   background: var(--sf-coral);
   border-radius: 26px;
-  padding: 14px 26px;
+  padding: 14px 36px;
   position: relative;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
 }
 .sf-tab--active::after {
   content: "";
   position: absolute;
-  right: -12px;
+  /* right: -12px; */
   top: 0;
   width: 24px;
   height: 100%;

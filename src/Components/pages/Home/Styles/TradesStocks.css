@@ -1,0 +1,163 @@
+/* TradesStocks.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.trades-stocks-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.trades-stocks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trades-stocks-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2d1e2f;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+  text-transform: lowercase;
+}
+
+.trades-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #1540a3;
+  margin: 0 auto 60px;
+  border-radius: 10px;
+}
+
+.trades-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.trades-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.trades-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+}
+
+.resources-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resource-item {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  padding-left: 20px;
+  position: relative;
+}
+
+.resource-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #5eb3a6;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.resource-item strong {
+  color: #2d1e2f;
+  font-weight: 600;
+}
+
+/* Chart Styles */
+.trades-chart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Custom Tooltip Styles */
+.custom-tooltip {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-month {
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tooltip-value {
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .trades-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trades-stocks-section {
+    padding: 50px 20px;
+  }
+
+  .trades-stocks-title {
+    font-size: 28px;
+  }
+
+  .trades-content {
+    gap: 40px;
+  }
+
+  .trades-chart {
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .trades-stocks-section {
+    padding: 40px 15px;
+  }
+
+  .trades-stocks-title {
+    font-size: 24px;
+  }
+
+  .trades-description,
+  .resource-item {
+    font-size: 14px;
+  }
+
+  .custom-tooltip {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+}

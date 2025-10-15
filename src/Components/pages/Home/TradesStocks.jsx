@@ -1,92 +1,127 @@
-import React from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
-import "./TradesStocks.css";
-
-const data = [
-  { month: "JAN", one: 10, two: 25 },
-  { month: "FEB", one: 15, two: 18 },
-  { month: "MAR", one: 20, two: 16 },
-  { month: "APR", one: 25, two: 17 },
-  { month: "MAY", one: 27, two: 20 },
-  { month: "JUN", one: 25, two: 25 },
-  { month: "JUL", one: 23, two: 30 },
-  { month: "AUG", one: 25, two: 35 },
-  { month: "SEP", one: 20, two: 32 },
-  { month: "OCT", one: 18, two: 28 },
-  { month: "NOV", one: 22, two: 33 },
-  { month: "DEC", one: 26, two: 37 },
-];
+// TradesStocks.jsx
+import React from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import './styles/TradesStocks.css';
 
 const TradesStocks = () => {
+  const chartData = [
+    { month: 'JAN', One: 10, Two: 25 },
+    { month: 'FEB', One: 15, Two: 18 },
+    { month: 'MAR', One: 20, Two: 16 },
+    { month: 'APR', One: 25, Two: 17 },
+    { month: 'MAY', One: 27, Two: 20 },
+    { month: 'JUN', One: 25, Two: 25 },
+    { month: 'JUL', One: 23, Two: 30 },
+    { month: 'AUG', One: 25, Two: 35 }
+  ];
+
+  const resources = [
+    { name: 'Don James/Semplice', description: 'Article and News research' },
+    { name: 'HighVoltageBusiness', description: 'Company and Industry Research' },
+    { name: 'Goovers', description: 'Company and Industry Research' },
+    { name: 'IRISpace', description: 'Industry Research' },
+    { name: 'Lexos-Nexos', description: 'Company, Industry, Market Research' },
+    { name: 'Plombett', description: 'Industry Research' },
+    { name: 'Pronounce', description: 'market analysis report "slices"' }
+  ];
+
+  // Custom Tooltip
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <div className="tooltip-month">{label}</div>
+          {payload.map((entry, index) => (
+            <div key={index} className="tooltip-value" style={{ color: entry.color }}>
+              {entry.name}: {entry.value}
+            </div>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <section className="trades-stocks-section">
-      <div className="container">
-        <div className="text-section">
-          <h2 className="title">
-            how and why investing or trading 
-            {/* <span>– an alternative to bank loans</span> */}
-          </h2>
-          <p className="description">
-            Trades & Stocks provide a modern pathway to financial growth without depending on traditional bank loans.
-            Instead of borrowing and paying interest, individuals and businesses can invest strategically in the stock
-            market to build capital.
-            Profits earned through informed trading and long-term investments can fund new ventures, manage operational costs,
-            and create sustainable cash flow.
-            This approach not only reduces financial liability but also offers greater control, flexibility, and scalability over
-            one’s economic future.:
-          </p>
+      <div className="trades-stocks-container">
+        <h2 className="trades-stocks-title">Trades & Stocks</h2>
+        <div className="trades-underline"></div>
 
-          <ul className="resources-list">
-            <li>
-              <span className="highlight">Don James/Semplice</span> – Article
-              and News research
-            </li>
-            <li>
-              <span className="highlight">HighVoltageBusiness</span> – Company
-              and Industry Research
-            </li>
-            <li>
-              <span className="highlight">Goovers</span> – Company and Industry
-              Research
-            </li>
-            <li>
-              <span className="highlight">IRISpace</span> – Industry Research
-            </li>
-            <li>
-              <span className="highlight">Lexos-Nexos</span> – Company,
-              Industry, Market Research
-            </li>
-            <li>
-              <span className="highlight">Plombett</span> – Industry Research
-            </li>
-            <li>
-              <span className="highlight">Pronounce</span> – market analysis
-              report “slices”
-            </li>
-          </ul>
-        </div>
+        <div className="trades-content">
+          {/* Left Side - Text Content */}
+          <div className="trades-text">
+            <p className="trades-description">
+              The first thing most investors want to see is a compelling one or two page 
+              executive summary. The goal of an executive summary is to persuade investors to 
+              request a full business plan or pitch deck. However, creating a compelling 
+              executive summary can be at least as challenging as developing a complete 
+              business plan. We have access to fee-based, subscriber-only resources such as:
+            </p>
 
-        <div className="chart-section">
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="one" fill="#FF6B6B" name="One" />
-              <Bar dataKey="two" fill="#5A7DFF" name="Two" />
-            </BarChart>
-          </ResponsiveContainer>
+            <ul className="resources-list">
+              {resources.map((resource, index) => (
+                <li key={index} className="resource-item">
+                  <strong>{resource.name}</strong> – {resource.description}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Side - Bar Chart */}
+          <div className="trades-chart">
+            <ResponsiveContainer width="100%" height={400}>
+              <BarChart
+                data={chartData}
+                margin={{ top: 20, right: 30, left: 0, bottom: 20 }}
+                barGap={3}
+                barCategoryGap="20%"
+              >
+                <CartesianGrid strokeDasharray="0" stroke="#e8e8e8" vertical={false} />
+                <XAxis 
+                  dataKey="month" 
+                  axisLine={{ stroke: '#e0e0e0', strokeWidth: 2 }}
+                  tickLine={false}
+                  tick={{ fill: '#999', fontSize: 12, fontFamily: 'Arial' }}
+                />
+                <YAxis 
+                  domain={[0, 35]}
+                  ticks={[0, 5, 10, 15, 20, 25, 30, 35]}
+                  axisLine={{ stroke: '#e0e0e0', strokeWidth: 2 }}
+                  tickLine={false}
+                  tick={{ fill: '#999', fontSize: 13, fontFamily: 'Arial' }}
+                />
+                <Tooltip 
+                  content={<CustomTooltip />}
+                  cursor={{ fill: 'transparent' }}
+                />
+                <Legend 
+                  verticalAlign="bottom"
+                  height={50}
+                  iconType="square"
+                  iconSize={16}
+                  wrapperStyle={{
+                    paddingTop: '20px',
+                    fontFamily: 'Arial',
+                    fontSize: '14px',
+                    color: '#666'
+                  }}
+                />
+                <Bar 
+                  dataKey="One" 
+                  fill="#e57373" 
+                  radius={[0, 0, 0, 0]}
+                  maxBarSize={40}
+                />
+                <Bar 
+                  dataKey="Two" 
+                  fill="#5c7cfa" 
+                  radius={[0, 0, 0, 0]}
+                  maxBarSize={40}
+                />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
     </section>

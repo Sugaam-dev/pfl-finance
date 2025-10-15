@@ -19,19 +19,22 @@ export default function Home() {
 
    <>
        <HeroSection/>
-    <RequestCallBack/>
+
+  <ImageHoverGallery/>
+ 
+        <TradesStocks/>
+
     <TestimonialsTeam/>
     <WhyChooseUs/>
 
 
 
-    <main className="min-h-screen">
+    {/* <main className="min-h-screen"> */}
   
-        <ImageHoverGallery/>
-        <TradesStocks/>
+     
         <EntrepreneurHero/>
-
-    </main>
+    <RequestCallBack/>
+    {/* </main> */}
    </>
   );
 }

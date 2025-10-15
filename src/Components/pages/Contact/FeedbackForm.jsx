@@ -126,175 +126,161 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="feedback-form-container">
-      <div className="form-card">
-        <h2 className="form-title">Feedback Form</h2>
-        
-        <form onSubmit={handleSubmit} className="feedback-form">
-          
-          {/* Honeypot for spam protection */}
-          <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-          
-          <div className="form-group">
-            <textarea
-              name="message"
-              placeholder="Your Message *"
-              rows="4"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="form-input form-textarea"
-            />
-          </div>
-
-          <div className="form-group">
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First name *"
-              value={formData.firstName}
-              onChange={handleChange}
-              required
-              className="form-input"
-            />
-          </div>
-
-          <div className="form-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail *"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="form-input"
-            />
-          </div>
-
-          {/* Custom Dropdown for Reason for Contact */}
-          <div className="form-group custom-dropdown-wrapper" ref={reasonRef}>
-            <div
-              className={`custom-dropdown-select ${reasonDropdownOpen ? 'open' : ''} ${!formData.reasonForContact ? 'placeholder' : ''}`}
-              onClick={() => setReasonDropdownOpen(!reasonDropdownOpen)}
-              role="button"
-              tabIndex={0}
-            >
-              <span className="custom-dropdown-selected">
-                {getDropdownDisplayText('reasonForContact', reasonOptions, 'Reason for Contact *')}
-              </span>
-              <svg 
-                className={`custom-dropdown-arrow ${reasonDropdownOpen ? 'rotated' : ''}`} 
-                fill="currentColor" 
-                viewBox="0 0 20 20"
-              >
-                <path 
-                  fillRule="evenodd" 
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-
-            {reasonDropdownOpen && (
-              <ul className="custom-dropdown-menu">
-                {reasonOptions.map((option, index) => (
-                  <li
-                    key={index}
-                    className={`custom-dropdown-option ${formData.reasonForContact === option.value ? 'selected' : ''}`}
-                    onClick={() => handleDropdownSelect('reasonForContact', option.value)}
-                    role="option"
-                    tabIndex={0}
-                  >
-                    {option.label}
-                  </li>
-                ))}
-              </ul>
-            )}
-            <input type="hidden" name="reasonForContact" value={formData.reasonForContact} required />
-          </div>
-
-          {/* Custom Dropdown for Area of Interest */}
-          <div className="form-group custom-dropdown-wrapper" ref={areaRef}>
-            <div
-              className={`custom-dropdown-select ${areaDropdownOpen ? 'open' : ''} ${!formData.areaOfInterest ? 'placeholder' : ''}`}
-              onClick={() => setAreaDropdownOpen(!areaDropdownOpen)}
-              role="button"
-              tabIndex={0}
-            >
-              <span className="custom-dropdown-selected">
-                {getDropdownDisplayText('areaOfInterest', areaOptions, 'Area of Interest *')}
-              </span>
-              <svg 
-                className={`custom-dropdown-arrow ${areaDropdownOpen ? 'rotated' : ''}`} 
-                fill="currentColor" 
-                viewBox="0 0 20 20"
-              >
-                <path 
-                  fillRule="evenodd" 
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-
-            {areaDropdownOpen && (
-              <ul className="custom-dropdown-menu">
-                {areaOptions.map((option, index) => (
-                  <li
-                    key={index}
-                    className={`custom-dropdown-option ${formData.areaOfInterest === option.value ? 'selected' : ''}`}
-                    onClick={() => handleDropdownSelect('areaOfInterest', option.value)}
-                    role="option"
-                    tabIndex={0}
-                  >
-                    {option.label}
-                  </li>
-                ))}
-              </ul>
-            )}
-            <input type="hidden" name="areaOfInterest" value={formData.areaOfInterest} required />
-          </div>
-
-          <div className="form-group">
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject *"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              className="form-input"
-            />
-          </div>
-
-          <button type="submit" className="submit-button" disabled={isSubmitting}>
-            {isSubmitting ? (
-              <>
-                <svg className="submit-arrow animate-spin" fill="currentColor" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                sending...
-              </>
-            ) : (
-              <>
-                submit
-                <svg className="submit-arrow" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/>
-                </svg>
-              </>
-            )}
-          </button>
-
-          {/* Success/Error Message */}
-          {result && (
-            <div className={`form-result ${result.includes('Success') ? 'success' : 'error'}`}>
-              {result}
-            </div>
-          )}
-        </form>
+   <div className="ff-feedback-form-container">
+  <div className="ff-form-card">
+    <h2 className="ff-form-title">Feedback Form</h2>
+    <form onSubmit={handleSubmit} className="ff-feedback-form">
+      {/* Honeypot */}
+      <input type="checkbox" name="botcheck" className="ff-hidden" style={{ display: 'none' }} />
+      <div className="ff-form-group">
+        <textarea
+          name="message"
+          placeholder="Your Message *"
+          rows="4"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          className="ff-form-input ff-form-textarea"
+        />
       </div>
-    </div>
+      <div className="ff-form-group">
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First name *"
+          value={formData.firstName}
+          onChange={handleChange}
+          required
+          className="ff-form-input"
+        />
+      </div>
+      <div className="ff-form-group">
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail *"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="ff-form-input"
+        />
+      </div>
+      <div className="ff-form-group ff-custom-dropdown-wrapper" ref={reasonRef}>
+        <div
+          className={`ff-custom-dropdown-select ${reasonDropdownOpen ? 'open' : ''} ${!formData.reasonForContact ? 'placeholder' : ''}`}
+          onClick={() => setReasonDropdownOpen(!reasonDropdownOpen)}
+          role="button"
+          tabIndex={0}
+        >
+          <span className="ff-custom-dropdown-selected">
+            {getDropdownDisplayText('reasonForContact', reasonOptions, 'Reason for Contact *')}
+          </span>
+          <svg
+            className={`ff-custom-dropdown-arrow ${reasonDropdownOpen ? 'rotated' : ''}`}
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+        {reasonDropdownOpen && (
+          <ul className="ff-custom-dropdown-menu">
+            {reasonOptions.map((option, index) => (
+              <li
+                key={index}
+                className={`ff-custom-dropdown-option ${formData.reasonForContact === option.value ? 'selected' : ''}`}
+                onClick={() => handleDropdownSelect('reasonForContact', option.value)}
+                role="option"
+                tabIndex={0}
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        )}
+        <input type="hidden" name="reasonForContact" value={formData.reasonForContact} required />
+      </div>
+      <div className="ff-form-group ff-custom-dropdown-wrapper" ref={areaRef}>
+        <div
+          className={`ff-custom-dropdown-select ${areaDropdownOpen ? 'open' : ''} ${!formData.areaOfInterest ? 'placeholder' : ''}`}
+          onClick={() => setAreaDropdownOpen(!areaDropdownOpen)}
+          role="button"
+          tabIndex={0}
+        >
+          <span className="ff-custom-dropdown-selected">
+            {getDropdownDisplayText('areaOfInterest', areaOptions, 'Area of Interest *')}
+          </span>
+          <svg
+            className={`ff-custom-dropdown-arrow ${areaDropdownOpen ? 'rotated' : ''}`}
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+        {areaDropdownOpen && (
+          <ul className="ff-custom-dropdown-menu">
+            {areaOptions.map((option, index) => (
+              <li
+                key={index}
+                className={`ff-custom-dropdown-option ${formData.areaOfInterest === option.value ? 'selected' : ''}`}
+                onClick={() => handleDropdownSelect('areaOfInterest', option.value)}
+                role="option"
+                tabIndex={0}
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        )}
+        <input type="hidden" name="areaOfInterest" value={formData.areaOfInterest} required />
+      </div>
+      <div className="ff-form-group">
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject *"
+          value={formData.subject}
+          onChange={handleChange}
+          required
+          className="ff-form-input"
+        />
+      </div>
+      <button type="submit" className="ff-submit-button" disabled={isSubmitting}>
+        {isSubmitting ? (
+          <>
+            <svg className="ff-submit-arrow ff-animate-spin" fill="currentColor" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            sending...
+          </>
+        ) : (
+          <>
+            submit
+            <svg className="ff-submit-arrow" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+            </svg>
+          </>
+        )}
+      </button>
+      {result && (
+        <div className={`ff-form-result ${result.includes('Success') ? 'success' : 'error'}`}>
+          {result}
+        </div>
+      )}
+    </form>
+  </div>
+</div>
+
   );
 };
 

@@ -1,8 +1,7 @@
-// ImageHoverGallery.jsx
-// Pure React JSX version (no TypeScript). Save as `ImageHoverGallery.jsx` and include `ImageHoverGallery.css` in the same folder.
+
 
 import React, { useRef, useEffect } from 'react';
-import './ImageHoverGallery.css';
+import './styles/ImageHoverGallery.css';
 
 const items = [
   { id:1, title:'Plan Your Loan', subtitle:'Person using a laptop at a desk with financial charts on screen, a pen and notepad beside it. Professional, warm office lighting.', img:'/images/loan-plan.png' },

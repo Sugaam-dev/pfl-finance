@@ -1,0 +1,303 @@
+/* Reset body and html for fullscreen */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Section Container - Takes full viewport */
+.fullscreen-hero-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Swiper Container - Full viewport height */
+.hero-swiper-container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Swiper Slides */
+.hero-swiper-container .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Slide Inner for Parallax */
+.slide-inner {
+  width: 110%;
+  height: 110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-swiper-container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+  transform: scale(1);
+  transition: transform 0.8s ease;
+}
+
+/* Zoom effect on active slide */
+.hero-swiper-container .swiper-slide-active img {
+  transform: scale(1.1);
+}
+
+/* Hero Content Overlay */
+.hero-overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  width: 90%;
+  padding: 0 20px;
+}
+
+.hero-main-heading {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description-text {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* CTA Button with Arrow Icon */
+.hero-cta-button {
+  position: relative;
+  padding: 15px 50px 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #0a4b8f;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.hero-cta-button:hover {
+  background-color: #397fb4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  padding-right: 55px;
+}
+
+/* Arrow Icon Inside Button */
+.button-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: translateY(-50%) rotate(-45deg);
+  transition: all 0.4s ease;
+}
+
+.hero-cta-button:hover .button-arrow {
+  right: 15px;
+  animation: arrowSlide 0.6s ease infinite;
+}
+
+/* Arrow Animation */
+@keyframes arrowSlide {
+  0%, 100% {
+    right: 15px;
+  }
+  50% {
+    right: 10px;
+  }
+}
+
+/* Custom Navigation Buttons - Square Style */
+.hero-swiper-container .swiper-button-next,
+.hero-swiper-container .swiper-button-prev {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.hero-swiper-container .swiper-button-next:hover,
+.hero-swiper-container .swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+/* Custom Arrow Icons */
+.hero-swiper-container .swiper-button-next:after,
+.hero-swiper-container .swiper-button-prev:after {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Position arrows */
+.hero-swiper-container .swiper-button-prev {
+  left: 45px;
+}
+
+.hero-swiper-container .swiper-button-next {
+  right: 45px;
+}
+
+/* Swiper Pagination - Enhanced Style */
+.hero-swiper-container .swiper-pagination {
+  bottom: 45px;
+}
+
+.hero-swiper-container .swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 0.4;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  transition: all 0.4s ease;
+}
+
+.hero-swiper-container .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  opacity: 1;
+  width: 35px;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .hero-main-heading {
+    font-size: 48px;
+  }
+
+  .hero-description-text {
+    font-size: 18px;
+  }
+
+  .hero-cta-button {
+    padding: 14px 45px 14px 35px;
+    font-size: 17px;
+  }
+
+  .hero-swiper-container .swiper-button-next,
+  .hero-swiper-container .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero-swiper-container .swiper-button-next:after,
+  .hero-swiper-container .swiper-button-prev:after {
+    font-size: 20px;
+  }
+
+  .hero-swiper-container .swiper-button-prev {
+    left: 25px;
+  }
+
+  .hero-swiper-container .swiper-button-next {
+    right: 25px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-main-heading {
+    font-size: 36px;
+    margin: 0 0 15px 0;
+  }
+
+  .hero-description-text {
+    font-size: 16px;
+    margin: 0 0 25px 0;
+  }
+
+  .hero-cta-button {
+    padding: 12px 40px 12px 30px;
+    font-size: 16px;
+  }
+
+  .button-arrow {
+    width: 10px;
+    height: 10px;
+    right: 15px;
+  }
+
+  .hero-swiper-container .swiper-button-next,
+  .hero-swiper-container .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero-swiper-container .swiper-button-next:after,
+  .hero-swiper-container .swiper-button-prev:after {
+    font-size: 18px;
+  }
+
+  .hero-swiper-container .swiper-button-prev {
+    left: 15px;
+  }
+
+  .hero-swiper-container .swiper-button-next {
+    right: 15px;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .hero-main-heading {
+    font-size: 28px;
+  }
+
+  .hero-description-text {
+    font-size: 14px;
+  }
+
+  .hero-cta-button {
+    padding: 10px 35px 10px 25px;
+    font-size: 14px;
+  }
+
+  .hero-swiper-container .swiper-button-next,
+  .hero-swiper-container .swiper-button-prev {
+    display: none;
+  }
+}

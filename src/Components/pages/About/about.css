@@ -87,7 +87,7 @@ section {
   border-radius: calc(var(--radius) * 1.2);
   box-shadow: 0 12px 30px rgba(16, 24, 40, 0.12);
   width: 900px;
-  height: 400px;
+  height: 500px;
 }
 .hero-content .title {
   font-size: 32px;

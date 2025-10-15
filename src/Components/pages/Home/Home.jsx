@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "./Carousel";
 import ImageHoverGallery from "./ImageHoverGallery";
 import TradesStocks from "./TradesStocks";
+import EntrepreneurHero from "./EntrepreneurHero";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Carousel images={images} />
         <ImageHoverGallery/>
         <TradesStocks/>
+        <EntrepreneurHero/>
       {/* </section> */}
     </main>
   );

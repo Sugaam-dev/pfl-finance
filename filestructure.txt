@@ -75,6 +75,7 @@
                 |-- box-reveal.jsx
                 |-- box-reveal.module.css
                 |-- carousel.jsx
+                |-- EntrepreneurHero.jsx
                 |-- Home.jsx
                 |-- ImageHoverGallery.css
                 |-- ImageHoverGallery.jsx

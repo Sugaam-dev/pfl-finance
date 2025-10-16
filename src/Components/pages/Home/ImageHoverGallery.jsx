@@ -1,7 +1,7 @@
 
 
 import React, { useRef, useEffect } from 'react';
-import './styles/ImageHoverGallery.css';
+import './Styles/ImageHoverGallery.css';
 
 const items = [
   { id:1, title:'Plan Your Loan', subtitle:'Person using a laptop at a desk with financial charts on screen, a pen and notepad beside it. Professional, warm office lighting.', img:'/images/loan-plan.png' },

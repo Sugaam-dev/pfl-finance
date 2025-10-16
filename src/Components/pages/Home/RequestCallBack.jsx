@@ -46,7 +46,7 @@ const RequestCallBack = () => {
             <div className="title-underline"></div>
             
             <p className="callback-description">
-              Do you have questions about how Consulting WP can help your 
+              Do you have questions about how we work we can help your 
               company? Send us an email and we'll get in touch shortly, or phone 
               between 8:00 and 18:00 Monday to Friday — we would be delighted 
               to speak.
@@ -57,21 +57,18 @@ const RequestCallBack = () => {
                 <div className="contact-icon phone-icon">
                   <Phone size={20} color="white" strokeWidth={2} />
                 </div>
-                <span className="contact-text phone-number">212 386 5575</span>
+                <span className="contact-text phone-number">8618543258</span>
               </div>
 
               <div className="contact-item">
                 <div className="contact-icon email-icon">
                   <Mail size={20} color="white" strokeWidth={2} />
                 </div>
-                <span className="contact-text email-text">info@consultingwp.com</span>
+                <span className="contact-text email-text">info.kumar2025@pflfinance.com</span>
               </div>
             </div>
 
-            <p className="privacy-text">
-              Your details are kept strictly confidential as per our{' '}
-              <a href="/privacy-policy" className="privacy-link">Privacy Policy</a>.
-            </p>
+            
           </div>
 
           <div className="callback-form-wrapper">

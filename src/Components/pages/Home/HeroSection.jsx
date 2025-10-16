@@ -16,7 +16,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-creative';
 import 'swiper/css/parallax';
 import 'swiper/css/zoom';
+
 import './Styles/HeroSection.css';
+
 
 export default function HeroSection() {
   return (
@@ -52,7 +54,7 @@ export default function HeroSection() {
         <SwiperSlide>
           <div className="slide-inner" data-swiper-parallax="-23%">
             <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHu4uTd-s-MEUUtFnQN6fz-H3RuRP9euZ25Q&s" 
+              src="/images/banner1.jpg" 
               alt="Slide 1" 
             />
           </div>
@@ -60,7 +62,7 @@ export default function HeroSection() {
         <SwiperSlide>
           <div className="slide-inner" data-swiper-parallax="-23%">
             <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs27fkNzjyS5yyA1teEFwd9CYPR5KY0pptkw&s" 
+              src="/images/banner2.jpg" 
               alt="Slide 2" 
             />
           </div>
@@ -68,7 +70,7 @@ export default function HeroSection() {
         <SwiperSlide>
           <div className="slide-inner" data-swiper-parallax="-23%">
             <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRcqHseEhTSVW28Yk3hdS-t50thJ7L8cikw&s" 
+              src="/images/banner3.jpg" 
               alt="Slide 3" 
             />
           </div>

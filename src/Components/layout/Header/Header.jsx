@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Style/Header.css';
-import logo from '../Footer/images/pflf.png';
+import logo from '../Footer/images/pfll.png';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin } from 'lucide-react';
 
 const Header = () => {
@@ -83,7 +83,7 @@ const Header = () => {
             <li className="nav-item mobile-contact-section">
               <div className="mobile-location">
                 <MapPin size={18} />
-                <span>Bangaluru, India</span>
+                <span>Bengaluru, India</span>
               </div>
               <div className="mobile-social-icons">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon" aria-label="Facebook">
@@ -105,7 +105,7 @@ const Header = () => {
           <div className="nav-right">
             <div className="location-wrapper">
               <MapPin className="location-icon" size={18} />
-              <span className="location-text">Bangaluru, India</span>
+              <span className="location-text">Bengaluru, India</span>
             </div>
             <div className="social-icons">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">

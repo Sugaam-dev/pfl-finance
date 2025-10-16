@@ -1,7 +1,7 @@
 // TestimonialsTeam.jsx
 import React, { useState, useEffect, useRef  } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import './styles/TestimonialsTeam.css';
+import './Styles/TestimonialsTeam.css';
 
 const TestimonialsTeam = () => {
   // Testimonials data

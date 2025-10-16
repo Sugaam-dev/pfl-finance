@@ -14,20 +14,19 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   position: relative;
-  /* padding: 80px 20px; */
+  padding: 80px 20px;
 }
 
-.why-choose-overlay {
+/* Remove position absolute and create overlay with pseudo-element */
+.why-choose-us::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 20px;
+  z-index: 0;
 }
 
 .why-choose-container {
@@ -38,6 +37,7 @@
   z-index: 1;
 }
 
+/* Rest of your CSS remains the same */
 .why-choose-title {
   font-size: 36px;
   font-weight: 700;
@@ -125,10 +125,6 @@
     padding: 60px 20px;
   }
 
-  .why-choose-overlay {
-    padding: 60px 20px;
-  }
-
   .why-choose-title {
     font-size: 32px;
   }
@@ -158,10 +154,6 @@
 @media screen and (max-width: 768px) {
   .why-choose-us {
     min-height: auto;
-    padding: 50px 20px;
-  }
-
-  .why-choose-overlay {
     padding: 50px 20px;
   }
 
@@ -202,10 +194,6 @@
 @media screen and (max-width: 480px) {
   .why-choose-us {
     min-height: auto;
-    padding: 40px 15px;
-  }
-
-  .why-choose-overlay {
     padding: 40px 15px;
   }
 

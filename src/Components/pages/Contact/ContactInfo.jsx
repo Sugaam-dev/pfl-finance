@@ -25,8 +25,10 @@ const ContactInfo = () => {
             <div className="contact-item">
               <MapPin size={20} className="contact-icon" strokeWidth={2} />
               <div>
-                <div>1010 Avenue of the Moon</div>
-                <div>New York, NY 10018, United States</div>
+                <div>402, Business TowerM.G. Road</div>
+                <div>Bangalore 580001</div>
+              
+
               </div>
             </div>
 
@@ -51,7 +53,7 @@ const ContactInfo = () => {
             {/* Email */}
             <div className="contact-item">
               <Mail size={20} className="contact-icon" strokeWidth={2} />
-              <div>info@stylemixthemes.com</div>
+              <div>rajendra@pflfinancial.com</div>
             </div>
 
             {/* Business Hours */}

@@ -1,7 +1,7 @@
 // WhyChooseUs.jsx
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import './styles/WhyChooseUs.css';
+import './Styles/WhyChooseUs.css';
 
 const WhyChooseUs = () => {
   const features = [

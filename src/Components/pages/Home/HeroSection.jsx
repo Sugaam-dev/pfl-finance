@@ -16,7 +16,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-creative';
 import 'swiper/css/parallax';
 import 'swiper/css/zoom';
-import './styles/HeroSection.css';
+import './Styles/HeroSection.css'; // Import custom CSS for styling
 
 export default function HeroSection() {
   return (

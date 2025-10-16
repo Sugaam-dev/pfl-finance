@@ -47,6 +47,8 @@
                 |-- images
                     |-- pfl.png
                     |-- pflf.png
+                    |-- pfll.png
+                    |-- pfllogo.jpeg
                     |-- Screenshot 2025-10-11 192346.png
                     |-- Screenshot 2025-10-11 194507.png
                     |-- Screenshot 2025-10-11 194949.png

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Style/Header.css';
-import logo from '../Footer/images/pflf.png';
+import logo from '../Footer/images/pfll.png';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin } from 'lucide-react';
 
 const Header = () => {

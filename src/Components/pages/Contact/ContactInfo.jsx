@@ -36,15 +36,15 @@ const ContactInfo = () => {
             <div className="contact-item">
               <Phone size={20} className="contact-icon" strokeWidth={2} />
               <div>
-                <div>+1 212 386 5575</div>
-                <div>+1 212 386 5577</div>
+                <div>+91 81230 12555 </div>
+              
               </div>
             </div>
 
             {/* Fax */}
             <div className="contact-item">
               <Printer size={20} className="contact-icon" strokeWidth={2} />
-              <div>+1 212 386 5555</div>
+              <div>+91 81230 12555 </div>
             </div>
           </div>
 

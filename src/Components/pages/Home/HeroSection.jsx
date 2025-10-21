@@ -4,41 +4,27 @@ import {
   Autoplay, 
   Pagination, 
   Navigation, 
-  EffectCreative,
-  Parallax,
-  Zoom
+  EffectFade
 } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-creative';
-import 'swiper/css/parallax';
-import 'swiper/css/zoom';
+import 'swiper/css/effect-fade';
 
 import './Styles/HeroSection.css';
-
 
 export default function HeroSection() {
   return (
     <section className="fullscreen-hero-wrapper">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation, EffectCreative, Parallax, Zoom]}
-        effect="creative"
-        parallax={true}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -800],
-            rotate: [0, 90, 0],
-          },
-          next: {
-            translate: [0, 0, -800],
-            rotate: [0, -90, 0],
-          },
+        modules={[Autoplay, Pagination, Navigation, EffectFade]}
+        effect="fade"
+        fadeEffect={{
+          crossFade: true
         }}
-        speed={1800}
+        speed={1200}
         autoplay={{
           delay: 4500,
           disableOnInteraction: false,
@@ -51,27 +37,37 @@ export default function HeroSection() {
         loop={true}
         className="hero-swiper-container"
       >
+        {/* First slide - eager loading */}
         <SwiperSlide>
-          <div className="slide-inner" data-swiper-parallax="-23%">
+          <div className="slide-inner">
             <img 
               src="/images/banner1.jpg" 
-              alt="Slide 1" 
+              alt="Slide 1"
+              loading="eager"
+              className="slide-image"
             />
           </div>
         </SwiperSlide>
+
+        {/* Remaining slides - native lazy loading */}
         <SwiperSlide>
-          <div className="slide-inner" data-swiper-parallax="-23%">
+          <div className="slide-inner">
             <img 
               src="/images/banner2.jpg" 
-              alt="Slide 2" 
+              alt="Slide 2"
+              loading="lazy"
+              className="slide-image"
             />
           </div>
         </SwiperSlide>
+
         <SwiperSlide>
-          <div className="slide-inner" data-swiper-parallax="-23%">
+          <div className="slide-inner">
             <img 
               src="/images/banner3.jpg" 
-              alt="Slide 3" 
+              alt="Slide 3"
+              loading="lazy"
+              className="slide-image"
             />
           </div>
         </SwiperSlide>
@@ -79,12 +75,12 @@ export default function HeroSection() {
 
       {/* Content overlay */}
       <div className="hero-overlay-content">
-        <h1 className="hero-main-heading" data-swiper-parallax="-300">Welcome to Our Website</h1>
-        <p className="hero-description-text" data-swiper-parallax="-200">
+        <h1 className="hero-main-heading">Welcome to Our Website</h1>
+        <p className="hero-description-text">
           Discover amazing experiences with our innovative solutions 
           designed to transform your business
         </p>
-        <button className="hero-cta-button" data-swiper-parallax="-100">
+        <button className="hero-cta-button">
           Get Started
           <span className="button-arrow"></span>
         </button>

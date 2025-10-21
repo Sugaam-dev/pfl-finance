@@ -27,11 +27,11 @@ const ContactPersons = () => {
             <div className="person-contact">
               <div className="contact-item">
                 <Phone size={14} strokeWidth={2} />
-                <span>+1 212 123 4505</span>
+                <span>97xxxxxxxx</span>
               </div>
               <div className="contact-item">
                 <Phone size={14} strokeWidth={2} />
-                <span>+1 212 202 3335</span>
+                <span>87xxxxxxxx</span>
               </div>
               <div className="contact-item">
                 <Mail size={14} strokeWidth={2} />
@@ -63,11 +63,11 @@ const ContactPersons = () => {
             <div className="person-contact">
               <div className="contact-item">
                 <Phone size={14} strokeWidth={2} />
-                <span>+1 212 123 4040</span>
+                <span>87xxxxxxxx</span>
               </div>
               <div className="contact-item">
                 <Phone size={14} strokeWidth={2} />
-                <span>+1 212 617 5050</span>
+                <span>87xxxxxxxx</span>
               </div>
               <div className="contact-item">
                 <Mail size={14} strokeWidth={2} />

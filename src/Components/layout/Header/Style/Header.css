@@ -7,7 +7,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   z-index: 1000;
   transition: all 0.3s ease;
-    font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .navbar {
@@ -53,7 +53,7 @@
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -232,8 +232,68 @@
   display: none;
 }
 
-/* Mobile styles */
-@media screen and (max-width: 1200px) {
+/* Tablet adjustments (1024px - 1280px) */
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+  .nav-container {
+    padding: 0.8rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .nav-menu {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .location-wrapper {
+    font-size: 0.85rem;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Small desktop/large tablet (969px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 969px) {
+  .nav-container {
+    padding: 0.8rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-menu {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .location-text {
+    display: none;
+  }
+
+  .location-wrapper {
+    gap: 0;
+  }
+
+  .social-icons {
+    gap: 0.4rem;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Mobile styles - now starts at 968px and below */
+@media screen and (max-width: 968px) {
   .nav-container {
     padding: 0.6rem 1.5rem;
   }
@@ -397,14 +457,6 @@
   }
 }
 
-/* Tablet adjustments */
-@media screen and (max-width: 1024px) and (min-width: 969px) {
-  .nav-link {
-    padding: 0.7rem 1rem;
-    font-size: 0.95rem;
-  }
-}
-
 /* Small mobile adjustments */
 @media screen and (max-width: 480px) {
   .nav-container {
@@ -459,7 +511,7 @@
 }
 
 /* Desktop hover for centered underline */
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 969px) {
   .nav-link:hover::after {
     transform: translateX(-50%) scaleX(1);
   }

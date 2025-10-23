@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Printer, Mail, Clock, Facebook, Twitter, Linkedin, Mail as GooglePlus, Phone as Skype } from 'lucide-react';
+import { MapPin, Phone, Printer, Mail, Clock, Facebook, Twitter, Linkedin, Mail as GooglePlus, Instagram } from 'lucide-react';
 import './Style/ContactInfo.css';
 
 const ContactInfo = () => {
@@ -10,12 +10,12 @@ const ContactInfo = () => {
       
       {/* Description */}
       <p className="description">
-        Please let us know if you have a question, want to leave a comment, or would like further information about Consulting WP.
+        Please let us know if you have a question, want to leave a comment, or would like further information about PFL Finance services.
       </p>
 
       {/* CLIENT INQUIRIES SECTION */}
       <div className="client-inquiries">
-        <h3 className="section-heading">client inquiries</h3>
+        <h3 className="section-heading">Client inquiries</h3>
         
         {/* Grid layout for contact info - 2 columns */}
         <div className="contact-grid">
@@ -67,20 +67,20 @@ const ContactInfo = () => {
 
             {/* Social Media Icons */}
             <div className="social-icons">
-              <a href="#facebook" className="social-icon" aria-label="Facebook">
+              <a href="https://facebook.com" className="social-icon" aria-label="Facebook">
                 <Facebook size={16} strokeWidth={2} />
               </a>
-              <a href="#twitter" className="social-icon" aria-label="Twitter">
+              <a href="https://twitter.com"  className="social-icon" aria-label="Twitter">
                 <Twitter size={16} strokeWidth={2} />
               </a>
-              <a href="#linkedin" className="social-icon" aria-label="LinkedIn">
+              <a href="https://linkedin.com" className="social-icon" aria-label="LinkedIn">
                 <Linkedin size={16} strokeWidth={2} />
               </a>
-              <a href="#google" className="social-icon" aria-label="Google Plus">
+              <a href="mailto:info.kumar2025@pflfinance.com" className="social-icon" aria-label="Google Plus">
                 <GooglePlus size={16} strokeWidth={2} />
               </a>
-              <a href="#skype" className="social-icon" aria-label="Skype">
-                <Skype size={16} strokeWidth={2} />
+              <a href="https://instagram.com" className="social-icon" aria-label="Instagram">
+                <Instagram size={16}  strokeWidth={2} />
               </a>
             </div>
           </div>

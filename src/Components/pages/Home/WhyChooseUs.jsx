@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
                 <h3 className="feature-title">{feature.title}</h3>
                 <p className="feature-description">{feature.description}</p>
                 <a href={feature.link} className="read-more-link">
-                  Read more
+                  Know more
                   <ChevronRight size={18} className="arrow-icon" />
                 </a>
               </div>

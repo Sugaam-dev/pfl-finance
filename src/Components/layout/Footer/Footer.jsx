@@ -18,7 +18,7 @@ export default function Footer() {
         {/* Social icons */}
         <ul className="footer__social" aria-label="Social media">
           <li>
-            <a href="#" aria-label="Facebook" className="socialLink" target="_blank" rel="noopener noreferrer">
+            <a href="https://facebook.com" aria-label="Facebook" className="socialLink" target="_blank" rel="noopener noreferrer">
               {/* Facebook SVG */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="#" aria-label="LinkedIn" className="socialLink" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com" aria-label="LinkedIn" className="socialLink" target="_blank" rel="noopener noreferrer">
               {/* LinkedIn SVG */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Instagram" className="socialLink" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com" aria-label="Instagram" className="socialLink" target="_blank" rel="noopener noreferrer">
               {/* Instagram SVG */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

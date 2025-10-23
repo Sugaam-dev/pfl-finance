@@ -24,15 +24,15 @@ const FeedbackForm = () => {
 
   // Dropdown options
   const reasonOptions = [
-    { value: 'general', label: 'General Inquiry' },
-    { value: 'support', label: 'Support' },
-    { value: 'feedback', label: 'Feedback' }
+    { value: 'General', label: 'General Inquiry' },
+    { value: 'Support', label: 'Support' },
+    { value: 'Feedback', label: 'Feedback' }
   ];
 
   const areaOptions = [
-    { value: 'consulting', label: 'Consulting' },
-    { value: 'development', label: 'Development' },
-    { value: 'design', label: 'Design' }
+    { value: 'Private Loan', label: 'Private Loan' },
+    { value: 'Home Loan', label: 'Home Loan' },
+    { value: 'Business Loan', label: 'Business Loan' }
   ];
 
   // Close dropdowns when clicking outside

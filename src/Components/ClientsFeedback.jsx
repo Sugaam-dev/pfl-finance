@@ -4,19 +4,19 @@ const clients = [
   {
     name: "Amanda Seyfried",
     title: "Sales & Marketing, Alien Ltd.",
-    text: "Consulting WP really helped us achieve our financial goals. The slick presentation along with fantastic readability ensures that our financial standing is stable.",
+    text: "PFL Finance  really helped us achieve our financial goals. The slick presentation along with fantastic readability ensures that our financial standing is stable.",
     avatar: "/images/clients/amanda.jpg",
   },
   {
     name: "Donald Simpson",
     title: "Chief Financial Officer, Jamaica International",
-    text: "When you are in the financial industry you know the image you have to project to people. You have to be agile and authoritative; Consulting WP is the way to go for financial institutions",
+    text: "When you are in the financial industry you know the image you have to project to people. You have to be agile and authoritative, PFL Finance is the way to go for financial institutions",
     avatar: "/images/clients/donald.jpg",
   },
   {
     name: "Christian Marcil",
     title: "Partner & Managing Director, Grandier Co.",
-    text: "Consulting WordPress Theme is the way to go for financial institutions. We take pride in being a transparent and perfection oriented organization.",
+    text: "PFL Finance is the way to go for financial institutions. We take pride in being a transparent and perfection oriented organization.",
     avatar: "/images/clients/christian.jpg",
   },
 ]

@@ -1,5 +1,5 @@
 import "./footer.css"
-import footerLogo from "./images/pfll.png";
+import footerLogo from "./images/pfllogo.jpeg";
 export default function Footer() {
   return (
     <footer className="footer" role="contentinfo">

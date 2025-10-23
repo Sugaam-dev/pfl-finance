@@ -13,6 +13,7 @@
             |-- amanda.jpg
             |-- christian.jpg
             |-- donald.jpg
+        |-- footerlogo.png
         |-- hero-meeting.jpg
         |-- india-map.jpg
         |-- loan-disbursement.png
@@ -44,6 +45,7 @@
                 |-- footer.css
                 |-- Footer.jsx
                 |-- images
+                    |-- footerlogo.png
                     |-- pfl.png
                     |-- pflf.png
                     |-- pfll.png

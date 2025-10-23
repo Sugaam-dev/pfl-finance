@@ -1,5 +1,6 @@
 import "./footer.css"
-import footerLogo from "./images/pfllogo.jpeg";
+import footerLogo from "./images/footerlogo.png";
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="footer" role="contentinfo">
@@ -67,25 +68,34 @@ export default function Footer() {
         <nav aria-label="Footer navigation">
           <ul className="footer__nav">
             <li>
-              <a href="#">Home</a>
+               <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+               <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Events</a>
+              <Link to="/services">Services</Link>
             </li>
+            
             <li>
-              <a href="#">Gallery</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
 
         {/* Copyright */}
-        <p className="footer__copy">@2025 All Rights Reserved Design by SUGAAM</p>
+       <p className="footer__copy">
+  ©2025 All Rights Reserved | Design by{" "}
+  <a 
+    href="https://www.pmrgsolution.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style={{ color: "inherit", textDecoration: "none" }}
+  >
+    PMRG Solutions
+  </a>
+</p>
+
       </div>
     </footer>
   )

@@ -75,10 +75,9 @@ export default function HeroSection() {
 
       {/* Content overlay */}
       <div className="hero-overlay-content">
-        <h1 className="hero-main-heading">Welcome to Our Website</h1>
+        <h1 className="hero-main-heading">Welcome to PFL Finance</h1>
         <p className="hero-description-text">
-          Discover amazing experiences with our innovative solutions 
-          designed to transform your business
+          Empowering your growth with smart, transparent, and reliable financial solutions tailored for your success.
         </p>
         <button className="hero-cta-button">
           Get Started

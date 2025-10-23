@@ -22,7 +22,7 @@ const TradesStocks = () => {
   const resources = [
     { name: 'Loan Approval' },
     { name: 'Loan Closed' },
-    { name: 'Loan Emergency' },
+    // { name: 'Loan Emergency' },
     // { name: 'IRISpace', description: 'Industry Research' },
     // { name: 'Lexos-Nexos', description: 'Company, Industry, Market Research' },
     // { name: 'Plombett', description: 'Industry Research' },
@@ -67,7 +67,7 @@ const TradesStocks = () => {
             <ul className="resources-list">
               {resources.map((resource, index) => (
                 <li key={index} className="resource-item">
-                  <strong>{resource.name}</strong> – {resource.description}
+                  <strong>{resource.name}</strong>  {resource.description}
                 </li>
               ))}
             </ul>

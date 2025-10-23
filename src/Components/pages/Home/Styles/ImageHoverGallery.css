@@ -54,7 +54,7 @@
 
 .ih-card:hover .ih-overlay,
 .ih-card:focus .ih-overlay {
-  background: rgba(18, 56, 151, 0.75);
+  background: rgba(53, 60, 77, 0.226);
   height: 100%;
 }
 /* .ih-overlay {
@@ -131,6 +131,6 @@
 }
 
 .ih-sub:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #f4f6f8;
 }

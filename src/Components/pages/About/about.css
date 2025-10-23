@@ -87,7 +87,14 @@ section {
   border-radius: calc(var(--radius) * 1.2);
   box-shadow: 0 12px 30px rgba(16, 24, 40, 0.12);
   width: 900px;
-  height: 500px;
+  height: 700px;
+}
+@media  (max-width: 428px)  {
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+  
 }
 .hero-content .title {
   font-size: 32px;
@@ -95,9 +102,10 @@ section {
 }
 .hero-content .lead {
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 2;
   margin: 0 0 16px;
+  padding-top: 3%;
 }
 .hero-points {
   display: grid;

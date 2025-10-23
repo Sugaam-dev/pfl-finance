@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
     },
     {
       id: 2,
-      title: 'Transparent & Hassle-Free Process',
+      title: 'No Hassle, Just Clarity',
       description: '100% clarity and peace of mind.',
       link: '/contact'
     },

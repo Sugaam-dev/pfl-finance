@@ -87,19 +87,20 @@ export default function ImageHoverGallery() {
     <section className="ih-section">
       <div className="ih-container" ref={containerRef}>
         {items.map((it) => (
-          <article key={it.id} className="ih-card" tabIndex="0" aria-label={it.title}>
-            <div className="ih-media" style={{ backgroundImage: `url(${it.img})` }}>
-              <div className="ih-overlay" />
-              <div className="ih-content">
-                <h3 className="ih-title">{it.title}</h3>
-                
-                {/* ✅ Simple clickable link to /services */}
-                <Link to="/services" className="ih-sub">
-                  {it.subtitle}
-                </Link>
+          <Link to="/services" key={it.id} className="ih-card-link">
+            <article className="ih-card" tabIndex="0" aria-label={it.title}>
+              <div
+                className="ih-media"
+                style={{ backgroundImage: `url(${it.img})` }}
+              >
+                <div className="ih-overlay" />
+                <div className="ih-content">
+                  <h3 className="ih-title">{it.title}</h3>
+                  {/* <p className="ih-sub">Read More</p> */}
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </Link>
         ))}
       </div>
     </section>

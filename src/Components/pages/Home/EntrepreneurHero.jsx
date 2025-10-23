@@ -252,8 +252,8 @@ export default function EntrepreneurHero() {
 
         .hero-title {
           font-size: clamp(24px, 5vw, 48px);
-          font-weight: 300;
-          color: #7dd3c0;
+          font-weight: 500;
+          color:#ffffff;
           line-height: 1.4;
           letter-spacing: -0.02em;
           text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);

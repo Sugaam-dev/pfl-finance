@@ -51,15 +51,7 @@ const Header = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link 
-                to="/services" 
-                className={`nav-link ${isActive('/services') ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
-                Services
-              </Link>
-            </li>
+            
             <li className="nav-item">
               <Link 
                 to="/about" 
@@ -67,6 +59,15 @@ const Header = () => {
                 onClick={closeMenu}
               >
                 About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
+                to="/services" 
+                className={`nav-link ${isActive('/services') ? 'active' : ''}`}
+                onClick={closeMenu}
+              >
+                Services
               </Link>
             </li>
             <li className="nav-item">

@@ -2,7 +2,7 @@
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
-  background: #0a3a6d;
+  background: #f8fafc;
 }
 
 .ih-container {
@@ -54,7 +54,7 @@
 
 .ih-card:hover .ih-overlay,
 .ih-card:focus .ih-overlay {
-  background: rgba(21, 5, 195, 0.75);
+  background: rgba(18, 56, 151, 0.75);
   height: 100%;
 }
 /* .ih-overlay {

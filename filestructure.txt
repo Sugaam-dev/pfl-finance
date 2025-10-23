@@ -39,7 +39,6 @@
     |-- Components
         |-- client-logos.css
         |-- ClientsFeedback.jsx
-        |-- Consulting-tabs.jsx
         |-- layout
             |-- Footer
                 |-- footer.css
@@ -59,12 +58,12 @@
                     |-- Header.css
             |-- RootLayout
                 |-- RootLayout.jsx
+                |-- ScrollToTop.jsx
         |-- Logos.jsx
         |-- pages
             |-- About
                 |-- about.css
                 |-- About.jsx
-                |-- StoryTimeline.jsx
             |-- Contact
                 |-- Contact.jsx
                 |-- ContactInfo.jsx

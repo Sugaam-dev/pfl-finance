@@ -57,14 +57,14 @@ const RequestCallBack = () => {
                 <div className="contact-icon phone-icon">
                   <Phone size={20} color="white" strokeWidth={2} />
                 </div>
-                <span className="contact-text phone-number">8618543258</span>
+                <span className="contact-text phone-number">+91 8618543258</span>
               </div>
 
               <div className="contact-item">
                 <div className="contact-icon email-icon">
                   <Mail size={20} color="white" strokeWidth={2} />
                 </div>
-                <span className="contact-text email-text">info.kumar2025@pflfinance.com</span>
+                <span className="contact-text email-text">rajendra@pflfinancial.com</span>
               </div>
             </div>
 

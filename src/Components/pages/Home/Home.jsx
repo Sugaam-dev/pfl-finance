@@ -1,27 +1,32 @@
-import React from "react";
-import HeroSection from "./HeroSection";
-import RequestCallBack from "./RequestCallBack";
-import TestimonialsTeam from "./TestimonialsTeam";
-import WhyChooseUs from "./WhyChooseUs";
-import ImageHoverGallery from "./ImageHoverGallery";
-import TradesStocks from "./TradesStocks";
-import EntrepreneurHero from "./EntrepreneurHero";
+import React, { Suspense, lazy } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-       export default function Home() {
+const HeroSection = lazy(() => import("./HeroSection"));
+const RequestCallBack = lazy(() => import("./RequestCallBack"));
+const TestimonialsTeam = lazy(() => import("./TestimonialsTeam"));
+const WhyChooseUs = lazy(() => import("./WhyChooseUs"));
+const ImageHoverGallery = lazy(() => import("./ImageHoverGallery"));
+const TradesStocks = lazy(() => import("./TradesStocks"));
+const EntrepreneurHero = lazy(() => import("./EntrepreneurHero"));
 
-
+export default function Home() {
   return (
-
-   <>
-       <HeroSection/>
-       <ImageHoverGallery/>
-       <TradesStocks/>
-       <TestimonialsTeam/>
-       <WhyChooseUs/>
-{/* <main className="min-h-screen"> */}
-       <EntrepreneurHero/>
-       <RequestCallBack/>
-       {/* </main> */}
-   </>
+    <Suspense
+      fallback={
+        <div>
+          {/* Skeleton placeholder roughly matching HeroSection height */}
+          <Skeleton height={400} />
+        </div>
+      }
+    >
+      <HeroSection />
+      <ImageHoverGallery />
+      <TradesStocks />
+      <TestimonialsTeam />
+      <WhyChooseUs />
+      <EntrepreneurHero />
+      <RequestCallBack />
+    </Suspense>
   );
 }

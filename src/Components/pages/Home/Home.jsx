@@ -1,10 +1,10 @@
 import React, { Suspense, lazy } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import ClientsFeedback from "../../ClientsFeedback";
 
 const HeroSection = lazy(() => import("./HeroSection"));
 const RequestCallBack = lazy(() => import("./RequestCallBack"));
-const TestimonialsTeam = lazy(() => import("./TestimonialsTeam"));
 const WhyChooseUs = lazy(() => import("./WhyChooseUs"));
 const ImageHoverGallery = lazy(() => import("./ImageHoverGallery"));
 const TradesStocks = lazy(() => import("./TradesStocks"));
@@ -23,7 +23,8 @@ export default function Home() {
       <HeroSection />
       <ImageHoverGallery />
       <TradesStocks />
-      <TestimonialsTeam />
+      {/* <ClientsFeedback /> */}
+      <ClientsFeedback/>
       <WhyChooseUs />
       <EntrepreneurHero />
       <RequestCallBack />

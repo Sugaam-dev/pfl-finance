@@ -22,6 +22,7 @@
   margin: 0 auto;
   padding: 0.8rem 2.5rem;
   gap: 2rem;
+  flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 /* Logo styling */
@@ -32,7 +33,7 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s ease;
-  max-height: 60px;
+  max-height: 80px; /* Increased from 60px */
   flex-shrink: 0;
 }
 
@@ -41,9 +42,9 @@
 }
 
 .logo-image {
-  height: 90px;
+  height: 100px; /* Increased from 90px */
   width: auto;
-  max-width: 180px;
+  max-width: 220px; /* Increased from 180px */
   object-fit: contain;
   display: block;
   vertical-align: middle;
@@ -256,12 +257,21 @@
     width: 32px;
     height: 32px;
   }
+
+  .nav-logo {
+    max-height: 70px; /* bigger on tablet */
+  }
+
+  .logo-image {
+    height: 90px;
+    max-width: 180px;
+  }
 }
 
 /* Small desktop/large tablet (969px - 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 969px) {
   .nav-container {
-    padding: 0.8rem 1.5rem;
+    padding: 0rem 1.5rem;
     gap: 1rem;
   }
 
@@ -290,21 +300,30 @@
     width: 30px;
     height: 30px;
   }
+
+  .nav-logo {
+    max-height: 65px; /* bigger small desktop */
+  }
+
+  .logo-image {
+    height: 85px;
+    max-width: 160px;
+  }
 }
 
 /* Mobile styles - now starts at 968px and below */
 @media screen and (max-width: 968px) {
   .nav-container {
-    padding: 0.6rem 1.5rem;
+    padding: 0rem 1.5rem;
   }
 
   .nav-logo {
-    max-height: 50px;
+    max-height: 60px; /* increased */
   }
 
   .logo-image {
-    height: 80px;
-    max-width: 150px;
+    height: 90px; /* increased */
+    max-width: 170px; /* increased */
   }
 
   /* Hide desktop social icons and location */
@@ -322,7 +341,8 @@
     top: 0;
     flex-direction: column;
     background: #ffffff;
-    width: 280px;
+    width: 100%; /* full-width for ease */
+    max-width: 320px; /* slightly wider */
     height: 100vh;
     padding: 5rem 1.5rem 2rem;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
@@ -460,16 +480,16 @@
 /* Small mobile adjustments */
 @media screen and (max-width: 480px) {
   .nav-container {
-    padding: 0.6rem 1rem;
+    padding: 0rem 1rem;
   }
 
   .nav-logo {
-    max-height: 45px;
+    max-height: 80px; /* Increased */
   }
 
   .logo-image {
-    height: 65px;
-    max-width: 130px;
+    height: 80px; /* Increased */
+    max-width: 150px; /* Increased */
   }
 
   .nav-menu {

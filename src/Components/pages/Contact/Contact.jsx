@@ -15,7 +15,7 @@ const ContactPage = () => {
         {/* LEFT SECTION - Contact Information */}
         <div className="contact-section">
           <ContactInfo />
-          <ContactPersons />
+          {/* <ContactPersons /> */}
         </div>
 
         {/* RIGHT SECTION - Feedback Form */}

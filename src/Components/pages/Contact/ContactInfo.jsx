@@ -36,7 +36,7 @@ const ContactInfo = () => {
             <div className="contact-item">
               <Phone size={20} className="contact-icon" strokeWidth={2} />
               <div>
-                <div>+91 81230 12555 </div>
+                <div>+91 8618543258 </div>
               
               </div>
             </div>
@@ -44,7 +44,7 @@ const ContactInfo = () => {
             {/* Fax */}
             <div className="contact-item">
               <Printer size={20} className="contact-icon" strokeWidth={2} />
-              <div>+91 81230 12555 </div>
+              <div>+91 8618543258 </div>
             </div>
           </div>
 
@@ -53,7 +53,7 @@ const ContactInfo = () => {
             {/* Email */}
             <div className="contact-item">
               <Mail size={20} className="contact-icon" strokeWidth={2} />
-              <div>rajendra@pflfinancial.com</div>
+              <div>info.kumar2025@pflfinance.com</div>
             </div>
 
             {/* Business Hours */}

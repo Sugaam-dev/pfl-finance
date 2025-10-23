@@ -12,7 +12,11 @@ const TradesStocks = () => {
     { month: 'MAY', LoanClosed: 27, LoanApproval: 20 },
     { month: 'JUN', LoanClosed: 25, LoanApproval: 25 },
     { month: 'JUL', LoanClosed: 23, LoanApproval: 30 },
-    { month: 'AUG', LoanClosed: 25, LoanApproval: 35 }
+    { month: 'AUG', LoanClosed: 25, LoanApproval: 35 },
+    { month: 'SEPT', LoanClosed: 30, LoanApproval: 35 },
+    { month: 'OCT', LoanClosed: 29, LoanApproval: 30 },
+    { month: 'NOV', LoanClosed: 31, LoanApproval: 33 },
+    { month: 'DEC', LoanClosed: 30, LoanApproval: 34 }
   ];
 
   const resources = [

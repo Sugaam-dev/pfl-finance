@@ -1,6 +1,6 @@
 .ff-feedback-form-container {
   width: 100%;
-  max-width: 560px;
+  /* max-width: 560px; */
 }
 
 .ff-form-card {
@@ -16,13 +16,13 @@
   color: #111827;
   margin-bottom: clamp(40px, 5vw, 56px);
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  /* line-height:; */
 }
 
 .ff-feedback-form {
   display: flex;
   flex-direction: column;
-  gap: clamp(24px, 3vw, 32px);
+  gap: clamp(12px, 1.5vw, 16px); /* Reduced gap */
 }
 
 .ff-form-group {
@@ -40,7 +40,7 @@
   transition: all 0.2s ease-in-out;
   font-family: inherit;
   color: #111827;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 .ff-form-input::placeholder {
@@ -60,7 +60,7 @@
 .ff-form-textarea {
   resize: vertical;
   min-height: clamp(120px, 15vw, 140px);
-  line-height: 1.6;
+  /* line-height: 1.6; */
 }
 
 .ff-submit-button {
@@ -81,7 +81,7 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease-in-out;
   width: fit-content;
-  margin-top: clamp(12px, 1.5vw, 16px);
+  margin-top: clamp(6px, 1vw, 8px); /* Reduced margin-top */
 }
 
 .ff-submit-button:hover {
@@ -248,7 +248,7 @@
 /* Large Screens: 1920px and above */
 @media (min-width: 1920px) {
   .ff-feedback-form-container {
-    max-width: 620px;
+    /* max-width: 620px; */
   }
   .ff-form-title {
     margin-bottom: 64px;
@@ -261,52 +261,52 @@
 /* Desktop: 1440px - 1919px */
 @media (min-width: 1440px) and (max-width: 1919px) {
   .ff-feedback-form-container {
-    max-width: 580px;
+    /* max-width: 580px; */
   }
   .ff-form-title {
     margin-bottom: 56px;
   }
   .ff-feedback-form {
-    gap: 32px;
+    gap: 20px;
   }
 }
 
 /* Medium Desktop: 1280px - 1439px */
 @media (min-width: 1280px) and (max-width: 1439px) {
   .ff-feedback-form-container {
-    max-width: 540px;
+    /* max-width: 540px; */
   }
   .ff-form-title {
     margin-bottom: 48px;
   }
   .ff-feedback-form {
-    gap: 28px;
+    gap: 20px;
   }
 }
 
 /* Small Desktop: 1024px - 1279px */
 @media (min-width: 1024px) and (max-width: 1279px) {
   .ff-feedback-form-container {
-    max-width: 500px;
+    /* max-width: 500px; */
   }
   .ff-form-title {
     margin-bottom: 44px;
   }
   .ff-feedback-form {
-    gap: 26px;
+    gap: 20px;
   }
 }
 
 /* Tablets: 768px - 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
   .ff-feedback-form-container {
-    max-width: 600px;
+    /* max-width: 600px; */
   }
   .ff-form-title {
     margin-bottom: 40px;
   }
   .ff-feedback-form {
-    gap: 24px;
+    gap: 20px;
   }
 }
 
@@ -319,7 +319,7 @@
     margin-bottom: 36px;
   }
   .ff-feedback-form {
-    gap: 22px;
+    gap: 20px;
   }
 }
 

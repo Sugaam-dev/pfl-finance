@@ -271,7 +271,7 @@
 /* Small desktop/large tablet (969px - 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 969px) {
   .nav-container {
-    padding: 0rem 1.5rem;
+    padding: 10px 1.5rem;
     gap: 1rem;
   }
 
@@ -314,7 +314,7 @@
 /* Mobile styles - now starts at 968px and below */
 @media screen and (max-width: 968px) {
   .nav-container {
-    padding: 0rem 1.5rem;
+    padding: 5px 1.5rem;
   }
 
   .nav-logo {
@@ -322,7 +322,7 @@
   }
 
   .logo-image {
-    height: 90px; /* increased */
+    height: 75px; /* increased */
     max-width: 170px; /* increased */
   }
 

@@ -11,7 +11,7 @@ body {
 }
 
 .contact-page-wrapper {
-  min-height: 100vh;
+  /* height: auto; */
   background-color: #ffffff;
   overflow-x: hidden;
   font-family: Helvetica, Arial, sans-serif;
@@ -20,8 +20,7 @@ body {
 .contact-page {
   display: grid;
   grid-template-columns: minmax(550px, 1.2fr) minmax(450px, 1fr);
-  min-height: 100vh;
-  max-width: 1440px;
+ 
   margin: 0 auto;
   width: 100%;
 }
@@ -42,7 +41,7 @@ body {
 @media (min-width: 1920px) {
   .contact-page {
     grid-template-columns: minmax(700px, 1.22fr) minmax(580px, 1fr);
-    max-width: 1600px;
+    /* max-width: 1600px; */
   }
   
   .contact-section {
@@ -58,7 +57,7 @@ body {
 @media (min-width: 1600px) and (max-width: 1919px) {
   .contact-page {
     grid-template-columns: minmax(680px, 1.24fr) minmax(560px, 1fr);
-    max-width: 1520px;
+    /* max-width: 1520px; */
   }
   
   .contact-section {
@@ -74,7 +73,7 @@ body {
 @media (min-width: 1440px) and (max-width: 1599px) {
   .contact-page {
     grid-template-columns: minmax(640px, 1.25fr) minmax(520px, 1fr);
-    max-width: 1440px;
+    /* max-width: 1440px; */
   }
   
   .contact-section {
@@ -90,7 +89,7 @@ body {
 @media (min-width: 1280px) and (max-width: 1439px) {
   .contact-page {
     grid-template-columns: minmax(600px, 1.29fr) minmax(480px, 1fr);
-    max-width: 1280px;
+    /* max-width: 1280px; */
   }
   
   .contact-section {

@@ -10,7 +10,7 @@ const ContactInfo = () => {
       
       {/* Description */}
       <p className="description">
-    Thank you for your interest in our financial and loan services. We are committed to providing professional guidance and reliable solutions to support your financial goals. To connect with our team, please complete the contact form below with your details, and a representative will respond promptly. You may also reach us directly via email or phone during business hours for any specific inquiries or assistance. At [Your Company Name], we prioritize building lasting relationships founded on trust, transparency, and excellence. We look forward to assisting you with your financial requirements and delivering personalized service with integrity.
+    Thank you for your interest in our financial and loan services. We are committed to providing professional guidance and reliable solutions to support your financial goals. To connect with our team, please complete the contact form below with your details, and a representative will respond promptly. You may also reach us directly via email or phone during business hours for any specific inquiries or assistance.we prioritize building lasting relationships founded on trust, transparency, and excellence. We look forward to assisting you with your financial requirements and delivering personalized service with integrity.
 
       </p>
 

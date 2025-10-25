@@ -9,11 +9,12 @@ const CONTACT_PATH = "/contact"
 const WHATSAPP_NUMBER = "8618543258"
 const waFor = (label) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'm interested in ${label}`)}`
 import auditImage from "./images/local-business-opportunities.jpg";
-import finimage from "./images/local-business-opportunities.jpg";
+import finimage from "./images/office-laptop-work.png";
 import bondimage from "./images/bonds-and-commodities.jpg";
 import tradeimage from "./images/trades-and-stocks.jpg";
 import strategicimage from "./images/strategic-planning.jpg";
 import turnaroundimage from "./images/turnaround-consulting.jpg";
+import TakeoverLoanSection from "./takeover-loan.jsx";
 const services = [
   {
     label: "Personal Loan Assistance",
@@ -67,6 +68,7 @@ export default function ServicePage() {
       <div className="extra-sections" aria-label="Additional Services">
         <FinancialPortfolioSection />
         <LoanSupportSection />
+        <TakeoverLoanSection />
       </div>
     </main>
   )

@@ -131,6 +131,7 @@
                 |-- Service-page.jsx
                 |-- ServiceCard.jsx
                 |-- services-sections.css
+                |-- takeover-loan.jsx
         |-- ProgressDonut.jsx
     |-- index.css
     |-- main.jsx

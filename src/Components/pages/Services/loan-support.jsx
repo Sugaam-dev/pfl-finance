@@ -1,5 +1,5 @@
 /* new page: Secure Loans Despite Legal or Credit Challenges (image left, text right) */
-import loanimage from "./images/turnaround-consulting.jpg"
+import loanimage from "./images/people-working-laptops.jpg"
 export default function LoanSupportSection() {
   const APPLY_LINK = `https://wa.me/8618543258?text=${encodeURIComponent(
     "Hi, I need help securing a loan despite legal/credit challenges",

@@ -6,6 +6,24 @@ import './Styles/RequestCallBack.css';
 const RequestCallBack = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState(null);
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  // Handle phone input - only allow numbers
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+    
+    // Limit to 10 digits
+    if (value.length <= 10) {
+      setPhoneNumber(value);
+    }
+  };
+
+  // Prevent non-numeric key presses
+  const handlePhoneKeyPress = (e) => {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault();
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,6 +42,7 @@ const RequestCallBack = () => {
       if (data.success) {
         setResult({ type: 'success', message: 'Form submitted successfully! We will contact you soon.' });
         e.target.reset();
+        setPhoneNumber(''); // Reset phone number state
       } else {
         setResult({ type: 'error', message: 'Something went wrong. Please try again.' });
       }
@@ -67,8 +86,6 @@ const RequestCallBack = () => {
                 <span className="contact-text email-text">info.kumar2025@pflfinance.com</span>
               </div>
             </div>
-
-            
           </div>
 
           <div className="callback-form-wrapper">
@@ -101,6 +118,7 @@ const RequestCallBack = () => {
                 className="form-select"
                 required
               >
+                <option value="">Select Service</option>
                 <option value="Business Planning">Business Planning</option>
                 <option value="Financial Planning">Financial Planning</option>
                 <option value="Strategic Consulting">Strategic Consulting</option>
@@ -112,7 +130,14 @@ const RequestCallBack = () => {
                 type="tel"
                 name="phone"
                 placeholder="Phone number"
+                value={phoneNumber}
+                onChange={handlePhoneChange}
+                onKeyPress={handlePhoneKeyPress}
                 className="form-input"
+                maxLength="10"
+                inputMode="numeric"
+                pattern="[0-9]{10}"
+                title="Please enter a valid 10-digit phone number"
                 required
               />
 

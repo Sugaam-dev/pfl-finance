@@ -6,6 +6,7 @@ const FeedbackForm = () => {
     message: '',
     firstName: '',
     email: '',
+    phone: '',
     reasonForContact: '',
     areaOfInterest: '',
     subject: ''
@@ -57,6 +58,26 @@ const FeedbackForm = () => {
     });
   };
 
+  // Handle phone input - only allow numbers
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+    
+    // Limit to 10 digits
+    if (value.length <= 10) {
+      setFormData({
+        ...formData,
+        phone: value
+      });
+    }
+  };
+
+  // Prevent non-numeric key presses
+  const handlePhoneKeyPress = (e) => {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault();
+    }
+  };
+
   const handleDropdownSelect = (name, value) => {
     setFormData({
       ...formData,
@@ -100,6 +121,7 @@ const FeedbackForm = () => {
           message: '',
           firstName: '',
           email: '',
+          phone: '',
           reasonForContact: '',
           areaOfInterest: '',
           subject: ''
@@ -132,6 +154,7 @@ const FeedbackForm = () => {
     <form onSubmit={handleSubmit} className="ff-feedback-form">
       {/* Honeypot */}
       <input type="checkbox" name="botcheck" className="ff-hidden" style={{ display: 'none' }} />
+      
       <div className="ff-form-group">
         <textarea
           name="message"
@@ -143,6 +166,7 @@ const FeedbackForm = () => {
           className="ff-form-input ff-form-textarea"
         />
       </div>
+
       <div className="ff-form-group">
         <input
           type="text"
@@ -154,6 +178,7 @@ const FeedbackForm = () => {
           className="ff-form-input"
         />
       </div>
+
       <div className="ff-form-group">
         <input
           type="email"
@@ -165,6 +190,24 @@ const FeedbackForm = () => {
           className="ff-form-input"
         />
       </div>
+
+      <div className="ff-form-group">
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number *"
+          value={formData.phone}
+          onChange={handlePhoneChange}
+          onKeyPress={handlePhoneKeyPress}
+          required
+          maxLength="10"
+          inputMode="numeric"
+          pattern="[0-9]{10}"
+          title="Please enter a valid 10-digit phone number"
+          className="ff-form-input"
+        />
+      </div>
+
       <div className="ff-form-group ff-custom-dropdown-wrapper" ref={reasonRef}>
         <div
           className={`ff-custom-dropdown-select ${reasonDropdownOpen ? 'open' : ''} ${!formData.reasonForContact ? 'placeholder' : ''}`}
@@ -204,6 +247,7 @@ const FeedbackForm = () => {
         )}
         <input type="hidden" name="reasonForContact" value={formData.reasonForContact} required />
       </div>
+
       <div className="ff-form-group ff-custom-dropdown-wrapper" ref={areaRef}>
         <div
           className={`ff-custom-dropdown-select ${areaDropdownOpen ? 'open' : ''} ${!formData.areaOfInterest ? 'placeholder' : ''}`}
@@ -243,6 +287,7 @@ const FeedbackForm = () => {
         )}
         <input type="hidden" name="areaOfInterest" value={formData.areaOfInterest} required />
       </div>
+
       <div className="ff-form-group">
         <input
           type="text"
@@ -254,6 +299,7 @@ const FeedbackForm = () => {
           className="ff-form-input"
         />
       </div>
+
       <button type="submit" className="ff-submit-button" disabled={isSubmitting}>
         {isSubmitting ? (
           <>
@@ -272,6 +318,7 @@ const FeedbackForm = () => {
           </>
         )}
       </button>
+
       {result && (
         <div className={`ff-form-result ${result.includes('Success') ? 'success' : 'error'}`}>
           {result}
@@ -280,7 +327,6 @@ const FeedbackForm = () => {
     </form>
   </div>
 </div>
-
   );
 };
 

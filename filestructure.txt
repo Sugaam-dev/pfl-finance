@@ -26,12 +26,16 @@
         |-- teams
             |-- axis.png
             |-- BankOfMaharashtra.webp
+            |-- bob.jpg
             |-- boi.jpg
+            |-- hdfc.jpg
+            |-- icici.jpg
             |-- idbi.jpg
             |-- indianoverseas.jpg
             |-- induslnd.jpg
             |-- kotak.jpg
             |-- sbi.jpg
+            |-- tatacapital.jpg
         |-- timeline-bg.jpg
     |-- vite.svg
 |-- README.md

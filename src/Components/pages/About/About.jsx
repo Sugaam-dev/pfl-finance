@@ -409,14 +409,20 @@ export default function About() {
         </h2>
         <div className="team-grid">
           {[
-            { name: "IDBI Bank", role: "IDBI Bank", img: "/images/teams/idbi.jpg" },
-            { name: "Axis Bandk", role: "Axis Bank", img: "/images/teams/axis.png" },
-            { name: "Bank Of Maharashtra", role: "Bank Of Maharashtra", img: "/images/teams/BankOfMaharashtra.webp" },
-            { name: "Induslnd Bank", role: "Induslnd Bank", img: "/images/teams/induslnd.jpg" },
-            { name: "BOI Bank", role: "BOI Bank", img: "/images/teams/boi.jpg" },
-            { name: "Kotak Bank", role: "Kotak Bank", img: "/images/teams/kotak.jpg" },
-            { name: "Indian Overseas", role: "indian overseas", img: "/images/teams/indianoverseas.jpg" },
-            { name: "SBI Bank", role: "SBI Bank", img: "/images/teams/sbi.jpg" },
+            // { name: "SBI Bank", role: "SBI Bank", img: "/images/teams/sbi.jpg" },
+            { name: "SBI Bank",  img: "/images/teams/sbi.jpg" },
+            { name: "Indian Overseas Bank", img: "/images/teams/indianoverseas.jpg" },
+            { name: "HDFC Bank", img: "/images/teams/hdfc.jpg" },
+            { name: "ICICI Bank",  img: "/images/teams/icici.jpg" },
+            { name: "Axis Bank", img: "/images/teams/axis.png" },
+            { name: "Bank of Baroda",  img: "/images/teams/bob.jpg" },
+            { name: "TATA Capital Bajaj Bank",img: "/images/teams/tatacapital.jpg" },
+            { name: "IDBI Bank",  img: "/images/teams/idbi.jpg" },          
+            { name: "Bank Of Maharashtra", img: "/images/teams/BankOfMaharashtra.webp" },
+            { name: "Induslnd Bank", img: "/images/teams/induslnd.jpg" },
+            { name: "BOI Bank", img: "/images/teams/boi.jpg" },
+            { name: "Kotak Bank",  img: "/images/teams/kotak.jpg" },
+           
           ].map((m, i) => (
             <article className="member" key={i}>
               <img

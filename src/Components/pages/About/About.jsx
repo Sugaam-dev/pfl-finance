@@ -1,4 +1,3 @@
-"use client"
 import { useState, useMemo } from "react";
 import "./about.css";
 import ProgressDonut from "../../ProgressDonut";

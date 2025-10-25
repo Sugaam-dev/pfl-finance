@@ -27,7 +27,7 @@
 
 .section-heading {
   font-size: clamp(15px, 1.5vw, 17px);
-  font-weight: 600;
+  font-weight: 500;
   color: #111827;
   margin-bottom: clamp(24px, 3vw, 32px); 
   letter-spacing: 0.01em;

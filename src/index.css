@@ -1,0 +1,9 @@
+/* In your App.css or index.css */
+html {
+  scroll-behavior: auto; /* Prevents conflicts with smooth scroll */
+}
+
+/* Or if you want smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}

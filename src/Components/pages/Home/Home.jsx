@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import ClientsFeedback from "../../ClientsFeedback";
+// import ClientsFeedback from "../../ClientsFeedback";
 
 const HeroSection = lazy(() => import("./HeroSection"));
 const RequestCallBack = lazy(() => import("./RequestCallBack"));
@@ -24,7 +24,7 @@ export default function Home() {
       <ImageHoverGallery />
       <TradesStocks />
       {/* <ClientsFeedback /> */}
-      <ClientsFeedback/>
+      {/* <ClientsFeedback/> */}
       <WhyChooseUs />
       <EntrepreneurHero />
       <RequestCallBack />

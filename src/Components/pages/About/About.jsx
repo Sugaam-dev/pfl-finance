@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import "./about.css";
 import ProgressDonut from "../../ProgressDonut";
-import ClientsFeedback from "../../ClientsFeedback";
+// import ClientsFeedback from "../../ClientsFeedback";
 // import StoryTimeline from "./StoryTimeline";
 // import Logos from "../../Logos";
 
@@ -440,7 +440,7 @@ export default function About() {
       </section>
 
       {/* Clients Feedback (new slider) */}
-      <ClientsFeedback />
+      {/* <ClientsFeedback /> */}
       {/* <Logos/> */}
     </main>
   )

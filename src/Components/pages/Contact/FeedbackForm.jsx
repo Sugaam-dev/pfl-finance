@@ -31,7 +31,7 @@ const FeedbackForm = () => {
   ];
 
   const areaOptions = [
-    { value: 'Private Loan', label: 'Private Loan' },
+    { value: 'Personal Loan', label: 'Personal Loan' },
     { value: 'Home Loan', label: 'Home Loan' },
     { value: 'Business Loan', label: 'Business Loan' }
   ];

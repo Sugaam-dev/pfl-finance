@@ -1,5 +1,6 @@
 /* new page: Improve Your Financial Portfolio section (text left, image right) */
 import financeimage from "./images/financial-charts-documents.jpg"
+import { Link } from 'react-router-dom';
 export default function TakeoverLoanSection() {
   const APPLY_LINK = `https://wa.me/8618543258?text=${encodeURIComponent(
     "Hi, I'm interested in take over loan services",
@@ -27,12 +28,13 @@ export default function TakeoverLoanSection() {
           <a className="btn btn-solid" href={APPLY_LINK} target="_blank" rel="noopener noreferrer">
             Apply Now
           </a>
-          <a className="read-more" href="/contact" aria-label="Go to contact page">
-            <span>Read More</span>
-            <span className="arrow" aria-hidden="true">
-              ➜
-            </span>
-          </a>
+          <Link className="read-more" to="/contact" aria-label="Go to contact page">
+  <span>Read More</span>
+  <span className="arrow" aria-hidden="true">
+    ➜
+  </span>
+</Link>
+
         </div>
       </div>
 

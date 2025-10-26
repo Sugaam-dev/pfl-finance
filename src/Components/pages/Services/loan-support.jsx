@@ -1,5 +1,6 @@
 /* new page: Secure Loans Despite Legal or Credit Challenges (image left, text right) */
 import loanimage from "./images/people-working-laptops.jpg"
+import { Link } from 'react-router-dom';
 export default function LoanSupportSection() {
   const APPLY_LINK = `https://wa.me/8618543258?text=${encodeURIComponent(
     "Hi, I need help securing a loan despite legal/credit challenges",
@@ -39,12 +40,13 @@ export default function LoanSupportSection() {
           <a className="btn btn-solid" href={APPLY_LINK} target="_blank" rel="noopener noreferrer">
             Apply Now
           </a>
-          <a className="read-more" href="/contact" aria-label="Go to contact page">
-            <span>Read More</span>
-            <span className="arrow" aria-hidden="true">
-              ➜
-            </span>
-          </a>
+          <Link className="read-more" to="/contact" aria-label="Go to contact page">
+  <span>Read More</span>
+  <span className="arrow" aria-hidden="true">
+    ➜
+  </span>
+</Link>
+
         </div>
       </div>
     </section>

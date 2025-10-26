@@ -12,7 +12,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
-
+import { Link } from 'react-router-dom';
 import './Styles/HeroSection.css';
 
 export default function HeroSection() {
@@ -79,10 +79,15 @@ export default function HeroSection() {
         <p className="hero-description-text">
           Empowering your growth with smart, transparent, and reliable financial solutions tailored for your success.
         </p>
-        <button className="hero-cta-button">
-          Get Started
-          <span className="button-arrow"></span>
-        </button>
+        <Link
+  to="/contact"
+  className="hero-cta-button"
+  style={{ color: "inherit", textDecoration: "none" }}
+>
+  Get Started
+  <span className="button-arrow"></span>
+</Link>
+
       </div>
     </section>
   );

@@ -54,7 +54,7 @@ const ContactInfo = () => {
             {/* Email */}
             <div className="contact-item">
               <Mail size={20} className="contact-icon" strokeWidth={2} />
-              <div>info.kumar2025@pflfinance.com</div>
+              <div>info.kumar2025@pflfinanceservice.com</div>
             </div>
 
             {/* Business Hours */}

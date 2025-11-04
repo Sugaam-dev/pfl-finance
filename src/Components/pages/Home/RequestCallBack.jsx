@@ -85,7 +85,7 @@ const RequestCallBack = () => {
                   <Mail size={20} color="white" strokeWidth={2} />
                 </div>
                 <span className="contact-text email-text">
-                  info.kumar2025@pflfinance.com
+                  info.kumar2025@pflfinanceservice.com
                 </span>
               </div>
             </div>

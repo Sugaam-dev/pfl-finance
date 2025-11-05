@@ -14,6 +14,7 @@
             |-- christian.jpg
             |-- donald.jpg
         |-- footerlogo.png
+        |-- header.png
         |-- hero-meeting.jpg
         |-- india-map.jpg
         |-- loan-disbursement.png
@@ -50,6 +51,9 @@
                 |-- Footer.jsx
                 |-- images
                     |-- footerlogo.png
+                    |-- header.png
+                    |-- headerlogo.jpeg
+                    |-- newlogo.jpeg
                     |-- pfl.png
                     |-- pflf.png
                     |-- pfll.png

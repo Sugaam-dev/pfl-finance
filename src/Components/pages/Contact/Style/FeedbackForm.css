@@ -12,7 +12,7 @@
 
 .ff-form-title {
   font-size: clamp(26px, 3.2vw, 36px);
-  font-weight: 600;
+  font-weight: 500;
   color: #111827;
   margin-bottom: clamp(40px, 5vw, 56px);
   letter-spacing: -0.02em;

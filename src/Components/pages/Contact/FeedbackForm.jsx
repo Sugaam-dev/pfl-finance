@@ -100,7 +100,7 @@ const FeedbackForm = () => {
     const formDataToSend = new FormData(e.target);
     
     // Add your Web3Forms Access Key here
-    formDataToSend.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formDataToSend.append("access_key", "e135b5e8-3379-428e-8595-b132763d6ef5");
 
     // Optional: Add custom subject or other settings
     formDataToSend.append("subject", "New Feedback Form Submission");

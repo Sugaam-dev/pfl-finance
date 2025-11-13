@@ -40,7 +40,7 @@
   height: 100%;
   display: block;
   object-fit: cover; /* ensures full circular fill */
-  border-radius: 50%; /* safety in case wrapper styles are overridden */
+  /* border-radius: 50%; safety in case wrapper styles are overridden */
 }
 
 .footer__social,
